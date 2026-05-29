@@ -1,0 +1,6 @@
+framework module Pods_dancingRp {
+  umbrella header "Pods-dancingRp-umbrella.h"
+
+  export *
+  module * { export * }
+}

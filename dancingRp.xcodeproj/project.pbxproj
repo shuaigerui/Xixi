@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04Q50424W3475713174274Y9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0420GOT977360L73708TUE41 /* StoreKit.framework */; };
+		8DWC8652312NCOK387P04W5P /* Pods_dancingRp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF6663D1T5W421855354CQQ6 /* Pods_dancingRp.framework */; };
+		BT0F777T016FVL1523F7234W /* DSFeedProfileObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BG98WCDPHT709ZW0L2281909 /* DSFeedProfileObject.swift */; };
+		CA5K21VE56579T3F4Y1Q0339 /* DSSecondaryManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = RF51050274M05L9174Q00119 /* DSSecondaryManagerView.swift */; };
+		DF5HD9012Z59L08R6XKMU60A /* DSToolScriptsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DN703C451U50W9W7863Z446Q /* DSToolScriptsController.swift */; };
+		FQMPQ9ZV2PE9H5W585018064 /* DSLaunchTeamObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = VPI74DJ5O489L773E66ZB62L /* DSLaunchTeamObject.swift */; };
+		JYVFEYK8WZ32A6541744U25W /* DSNetworkToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EN526Y043ME48I047Z218P1V /* DSNetworkToolView.swift */; };
+		LBU61OG471890Y822958U8L1 /* DSUserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FYFH14241H4230Y787W35 /* DSUserObject.swift */; };
+		LCRH15405GQ13W99319K3637 /* DSCurrentReportObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = YH335EQG5IL196K6HH81207S /* DSCurrentReportObject.swift */; };
+		OO15SZ451W26449413873E02 /* DSMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = KBKH7F9TB9417996669QOFF4 /* DSMessageController.swift */; };
+		PG2762F903J7V7143819F928 /* DSPackageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = KX75TNE894E1I4EW979274Y0 /* DSPackageController.swift */; };
+		PKO457203R84E1I2EG523HM8 /* DSMoreLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = KHI9273FAR085659116M31RU /* DSMoreLoaderView.swift */; };
+		RCGHS43Z6AH47377E829N5Z6 /* DSDelegateBlackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BQ3D1663205776N2150C9F43 /* DSDelegateBlackView.swift */; };
+		RKX247817KK4Y931O325S214 /* DSSignEmptyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = IVZ727Y263CW390423L3893B /* DSSignEmptyController.swift */; };
+		SFL88HSPO2C39WO9530111H7 /* DSFeedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = NH5GN9810350ZK034NCS5840 /* DSFeedObject.swift */; };
+		UI59542823TJP65F616XY1L6 /* DSLoginHeaderObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = IV4467614R946XF54J7720GX /* DSLoginHeaderObject.swift */; };
+		UWQ8J391993185213W638452 /* DSPersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = GL90K84985014V6FA51AK292 /* DSPersonController.swift */; };
+		ZCX12080CC26CW45D61649DA /* DSCreateObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = VZ2850683127F8527YO4661O /* DSCreateObject.swift */; };
+		ZU82EM9744751D0K61958H3M /* DSExtensionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = TZ8628326T4W0FO1E489750P /* DSExtensionObject.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0420GOT977360L73708TUE41 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		04NUI32TND2K56ZT53773V14 /* dancingRp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dancingRp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C1F4M914C75004N77MQ0Y5D /* Pods-dancingRp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dancingRp.release.xcconfig"; path = "Target Support Files/Pods-dancingRp/Pods-dancingRp.release.xcconfig"; sourceTree = "<group>"; };
+		4B221Z997700N43309379494 /* Pods-dancingRp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dancingRp.debug.xcconfig"; path = "Target Support Files/Pods-dancingRp/Pods-dancingRp.debug.xcconfig"; sourceTree = "<group>"; };
+		BG98WCDPHT709ZW0L2281909 /* DSFeedProfileObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.swift; path = DSFeedProfileObject.swift; sourceTree = "<group>"; };
+		BQ3D1663205776N2150C9F43 /* DSDelegateBlackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.swift; path = DSDelegateBlackView.swift; sourceTree = "<group>"; };
+		DN703C451U50W9W7863Z446Q /* DSToolScriptsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.swift; path = DSToolScriptsController.swift; sourceTree = "<group>"; };
+		EN526Y043ME48I047Z218P1V /* DSNetworkToolView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.swift; path = DSNetworkToolView.swift; sourceTree = "<group>"; };
+		FA4FYFH14241H4230Y787W35 /* DSUserObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.swift; path = DSUserObject.swift; sourceTree = "<group>"; };
+		FF6663D1T5W421855354CQQ6 /* Pods_dancingRp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dancingRp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		GL90K84985014V6FA51AK292 /* DSPersonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.swift; path = DSPersonController.swift; sourceTree = "<group>"; };
+		IV4467614R946XF54J7720GX /* DSLoginHeaderObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.swift; path = DSLoginHeaderObject.swift; sourceTree = "<group>"; };
+		IVZ727Y263CW390423L3893B /* DSSignEmptyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.swift; path = DSSignEmptyController.swift; sourceTree = "<group>"; };
+		KBKH7F9TB9417996669QOFF4 /* DSMessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.swift; path = DSMessageController.swift; sourceTree = "<group>"; };
+		KHI9273FAR085659116M31RU /* DSMoreLoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.swift; path = DSMoreLoaderView.swift; sourceTree = "<group>"; };
+		KX75TNE894E1I4EW979274Y0 /* DSPackageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.swift; path = DSPackageController.swift; sourceTree = "<group>"; };
+		NH5GN9810350ZK034NCS5840 /* DSFeedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.swift; path = DSFeedObject.swift; sourceTree = "<group>"; };
+		RF51050274M05L9174Q00119 /* DSSecondaryManagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.swift; path = DSSecondaryManagerView.swift; sourceTree = "<group>"; };
+		TZ8628326T4W0FO1E489750P /* DSExtensionObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.swift; path = DSExtensionObject.swift; sourceTree = "<group>"; };
+		VPI74DJ5O489L773E66ZB62L /* DSLaunchTeamObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.swift; path = DSLaunchTeamObject.swift; sourceTree = "<group>"; };
+		VZ2850683127F8527YO4661O /* DSCreateObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.swift; path = DSCreateObject.swift; sourceTree = "<group>"; };
+		YH335EQG5IL196K6HH81207S /* DSCurrentReportObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.swift; path = DSCurrentReportObject.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		04838GB60113829VYZW94SP3 /* Exceptions for "dancingRp" folder in "dancingRp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 04SH0598TR6S23305699840E /* dancingRp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0417E6877OY82081WS8LO69P /* dancingRp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				04838GB60113829VYZW94SP3 /* Exceptions for "dancingRp" folder in "dancingRp" target */,
+			);
+			path = dancingRp;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		043T5BI8Q74Y6P2Y9O793508 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DWC8652312NCOK387P04W5P /* Pods_dancingRp.framework in Frameworks */,
+				04Q50424W3475713174274Y9 /* StoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		046Q3T19KU716VM050F19283 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04NUI32TND2K56ZT53773V14 /* dancingRp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04A1H618834NLAXGF5W85Q73 = {
+			isa = PBXGroup;
+			children = (
+				0417E6877OY82081WS8LO69P /* dancingRp */,
+				046Q3T19KU716VM050F19283 /* Products */,
+				DFH6076227P9JW45K1002070 /* Pods */,
+				E8TW31143114B2N2182O18N0 /* Frameworks */,
+				XK1053CV114HD60327538190 /* enumerator */,
+			);
+			sourceTree = "<group>";
+		};
+		DFH6076227P9JW45K1002070 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B221Z997700N43309379494 /* Pods-dancingRp.debug.xcconfig */,
+				1C1F4M914C75004N77MQ0Y5D /* Pods-dancingRp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E8TW31143114B2N2182O18N0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0420GOT977360L73708TUE41 /* StoreKit.framework */,
+				FF6663D1T5W421855354CQQ6 /* Pods_dancingRp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		XK1053CV114HD60327538190 /* enumerator */ = {
+			isa = PBXGroup;
+			children = (
+				IV4467614R946XF54J7720GX /* DSLoginHeaderObject.swift */,
+				IVZ727Y263CW390423L3893B /* DSSignEmptyController.swift */,
+				KHI9273FAR085659116M31RU /* DSMoreLoaderView.swift */,
+				DN703C451U50W9W7863Z446Q /* DSToolScriptsController.swift */,
+				NH5GN9810350ZK034NCS5840 /* DSFeedObject.swift */,
+				FA4FYFH14241H4230Y787W35 /* DSUserObject.swift */,
+				TZ8628326T4W0FO1E489750P /* DSExtensionObject.swift */,
+				YH335EQG5IL196K6HH81207S /* DSCurrentReportObject.swift */,
+				KX75TNE894E1I4EW979274Y0 /* DSPackageController.swift */,
+				VZ2850683127F8527YO4661O /* DSCreateObject.swift */,
+				BG98WCDPHT709ZW0L2281909 /* DSFeedProfileObject.swift */,
+				VPI74DJ5O489L773E66ZB62L /* DSLaunchTeamObject.swift */,
+				GL90K84985014V6FA51AK292 /* DSPersonController.swift */,
+				RF51050274M05L9174Q00119 /* DSSecondaryManagerView.swift */,
+				EN526Y043ME48I047Z218P1V /* DSNetworkToolView.swift */,
+				BQ3D1663205776N2150C9F43 /* DSDelegateBlackView.swift */,
+				KBKH7F9TB9417996669QOFF4 /* DSMessageController.swift */,
+			);
+			path = enumerator;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04SH0598TR6S23305699840E /* dancingRp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 048CQC2154VWL674OS306929 /* Build configuration list for PBXNativeTarget "dancingRp" */;
+			buildPhases = (
+				CC50L86A863392P12V4904L3 /* [CP] Check Pods Manifest.lock */,
+				040312S2256BD27654XC0I12 /* Sources */,
+				043T5BI8Q74Y6P2Y9O793508 /* Frameworks */,
+				04000M03UQQ01951C4AM129V /* Resources */,
+				7C1V06U3U1S6JH195MS9HQ3F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0417E6877OY82081WS8LO69P /* dancingRp */,
+			);
+			name = dancingRp;
+			productName = dancingRp;
+			productReference = 04NUI32TND2K56ZT53773V14 /* dancingRp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04613Z490200H8L23E7U588F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = DS_;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					04SH0598TR6S23305699840E = {
+						CreatedOnToolsVersion = 26.2;
+					};
+				};
+			};
+			buildConfigurationList = 04R6Y25Y59Q24717Y4767148 /* Build configuration list for PBXProject "dancingRp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04A1H618834NLAXGF5W85Q73;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 046Q3T19KU716VM050F19283 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04SH0598TR6S23305699840E /* dancingRp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04000M03UQQ01951C4AM129V /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7C1V06U3U1S6JH195MS9HQ3F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dancingRp/Pods-dancingRp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dancingRp/Pods-dancingRp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dancingRp/Pods-dancingRp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC50L86A863392P12V4904L3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dancingRp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		040312S2256BD27654XC0I12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				UI59542823TJP65F616XY1L6 /* DSLoginHeaderObject.swift in Sources */,
+				RKX247817KK4Y931O325S214 /* DSSignEmptyController.swift in Sources */,
+				PKO457203R84E1I2EG523HM8 /* DSMoreLoaderView.swift in Sources */,
+				DF5HD9012Z59L08R6XKMU60A /* DSToolScriptsController.swift in Sources */,
+				SFL88HSPO2C39WO9530111H7 /* DSFeedObject.swift in Sources */,
+				LBU61OG471890Y822958U8L1 /* DSUserObject.swift in Sources */,
+				ZU82EM9744751D0K61958H3M /* DSExtensionObject.swift in Sources */,
+				LCRH15405GQ13W99319K3637 /* DSCurrentReportObject.swift in Sources */,
+				PG2762F903J7V7143819F928 /* DSPackageController.swift in Sources */,
+				ZCX12080CC26CW45D61649DA /* DSCreateObject.swift in Sources */,
+				BT0F777T016FVL1523F7234W /* DSFeedProfileObject.swift in Sources */,
+				FQMPQ9ZV2PE9H5W585018064 /* DSLaunchTeamObject.swift in Sources */,
+				UWQ8J391993185213W638452 /* DSPersonController.swift in Sources */,
+				CA5K21VE56579T3F4Y1Q0339 /* DSSecondaryManagerView.swift in Sources */,
+				JYVFEYK8WZ32A6541744U25W /* DSNetworkToolView.swift in Sources */,
+				RCGHS43Z6AH47377E829N5Z6 /* DSDelegateBlackView.swift in Sources */,
+				OO15SZ451W26449413873E02 /* DSMessageController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		04792ZV47E93621H79F55279 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C1F4M914C75004N77MQ0Y5D /* Pods-dancingRp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = dancingRp/dancingRp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HY3YA6W479;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = dancingRp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Xixi;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera access is required for video chat.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone access is required for video chat.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "You need to access your photo album to set your profile picture.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DanceSocial.xixi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		048HQ7VU22619NS7126R3090 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B221Z997700N43309379494 /* Pods-dancingRp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = dancingRp/dancingRp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HY3YA6W479;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = dancingRp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Xixi;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera access is required for video chat.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone access is required for video chat.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "You need to access your photo album to set your profile picture.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DanceSocial.xixi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		04NMKNHQ93K081G473178731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = HY3YA6W479;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04X65P0L6N42FW82V8406RS4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = HY3YA6W479;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		048CQC2154VWL674OS306929 /* Build configuration list for PBXNativeTarget "dancingRp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				048HQ7VU22619NS7126R3090 /* Debug */,
+				04792ZV47E93621H79F55279 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04R6Y25Y59Q24717Y4767148 /* Build configuration list for PBXProject "dancingRp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04X65P0L6N42FW82V8406RS4 /* Debug */,
+				04NMKNHQ93K081G473178731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04613Z490200H8L23E7U588F /* Project object */;
+}

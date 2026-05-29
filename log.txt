@@ -1,0 +1,725 @@
+开始自动混淆项目代码扫描文件中。。。。。。
+
+
+混淆项目路径：/Users/a0000/Desktop/whc_clone_directory/dancingRp
+新文件 <-> 现有文件 : LaunchScreen.storyboard      LaunchScreen.storyboard
+新文件 <-> 现有文件 : Main.storyboard      Main.storyboard
+新文件 <-> 现有文件 : DSHomeController.swift      ViewController.swift
+新文件 <-> 现有文件 : DSSetupManagerController.swift      DS_VideoVC.swift
+新文件 <-> 现有文件 : DSAppleController.swift      DS_AIRommVC.swift
+新文件 <-> 现有文件 : DSEditController.swift      DS_ImageVC.swift
+新文件 <-> 现有文件 : DSProfileEditCell.swift      DS_HomeClipCell.swift
+新文件 <-> 现有文件 : DSNewsCoordinatorView.swift      DS_HomeHeaderView.swift
+新文件 <-> 现有文件 : DSCoverThumbnailView.swift      DS_HomeHeaderReusableView.swift
+新文件 <-> 现有文件 : DSToolCell.swift      DS_AIChatMessageCell.swift
+新文件 <-> 现有文件 : DSScreenProfileCell.swift      DS_HomeTeamCell.swift
+新文件 <-> 现有文件 : DSNetworkExtensionController.swift      DS_HomeVC.swift
+新文件 <-> 现有文件 : DSMainController.swift      DS_PushPostVC.swift
+新文件 <-> 现有文件 : DSScriptsController.swift      DS_PostCommentSheetVC.swift
+新文件 <-> 现有文件 : DSImage.swift      DS_PostFeedMoreHandling.swift
+新文件 <-> 现有文件 : DSExtensionController.swift      DS_PostVC.swift
+新文件 <-> 现有文件 : DSRommView.swift      DS_PostHeaderView.swift
+新文件 <-> 现有文件 : DSMoreBaseCell.swift      DS_PostFeedCell.swift
+新文件 <-> 现有文件 : DSToolCatalogCell.swift      DS_PostCommentCell.swift
+新文件 <-> 现有文件 : DSListController.swift      DS_VideoRoomVC.swift
+新文件 <-> 现有文件 : DSLoginController.swift      DS_ChatRoomVC.swift
+新文件 <-> 现有文件 : DSRommManagerCell.swift      DS_ChatRoomMessageCell.swift
+新文件 <-> 现有文件 : DSCurrentCell.swift      DS_ChatAskCell.swift
+新文件 <-> 现有文件 : DSLaunchCoordinatorView.swift      DS_ChatHeaderView.swift
+新文件 <-> 现有文件 : DSDataCell.swift      DS_ChatFriendCell.swift
+新文件 <-> 现有文件 : DSCoordinatorCell.swift      DS_ChatMessageCell.swift
+新文件 <-> 现有文件 : DSDelegateController.swift      DS_ChatVC.swift
+新文件 <-> 现有文件 : DSSecondaryController.swift      DS_BlackListVC.swift
+新文件 <-> 现有文件 : DSExtensionRegisterController.swift      DS_ShopVC.swift
+新文件 <-> 现有文件 : DSHomeProfileController.swift      DS_ProfileVC.swift
+新文件 <-> 现有文件 : DSChatController.swift      DS_ReviseVC.swift
+新文件 <-> 现有文件 : DSLoginDelegateController.swift      DS_PersonVC.swift
+新文件 <-> 现有文件 : DSRegisterController.swift      DS_ContactVC.swift
+新文件 <-> 现有文件 : DSClip.swift      DS_ShopCatalog.swift
+新文件 <-> 现有文件 : DSHandlingEmptyController.swift      DS_ReportVC.swift
+新文件 <-> 现有文件 : DSContactChatController.swift      DS_SetupVC.swift
+新文件 <-> 现有文件 : DSLaunchBaseCell.swift      DS_BlackListCell.swift
+新文件 <-> 现有文件 : DSCurrentView.swift      DS_PersonHeaderView.swift
+新文件 <-> 现有文件 : DSTeamSecondaryView.swift      DS_ProfileHeaderView.swift
+新文件 <-> 现有文件 : DSScriptsCell.swift      DS_ShopPackageCell.swift
+新文件 <-> 现有文件 : DSFriendController.swift      DS_CreateLiveVC.swift
+新文件 <-> 现有文件 : DSBaseBaseController.swift      DS_GroupRoomVC.swift
+新文件 <-> 现有文件 : DSLiveCatalogController.swift      DS_LiveVC.swift
+新文件 <-> 现有文件 : DSPackageReportCell.swift      DS_LiveRoomCell.swift
+新文件 <-> 现有文件 : DSExtensionMainCell.swift      DS_GroupRoomMessageCell.swift
+新文件 <-> 现有文件 : DSLiveImageView.swift      DS_LiveHeaderView.swift
+新文件 <-> 现有文件 : DSLiveView.swift      DS_LiveHeaderReusableView.swift
+新文件 <-> 现有文件 : DSEditSheet.swift      DS_AppleSignInCoordinator.swift
+新文件 <-> 现有文件 : DSCenterSetupController.swift      DS_LoginVC.swift
+新文件 <-> 现有文件 : DSCurrentScriptsController.swift      DS_SetupInfoVC.swift
+新文件 <-> 现有文件 : DSCoordinatorAppleController.swift      DS_WelcomeVC.swift
+新文件 <-> 现有文件 : DSCatalogController.swift      DS_GuideVC.swift
+新文件 <-> 现有文件 : DSGuide.swift      DS_NetworkTool.swift
+新文件 <-> 现有文件 : DSModityApple.swift      UIColor+Extension.swift
+新文件 <-> 现有文件 : DSSecondaryNews.swift      DS_CurrentUser.swift
+新文件 <-> 现有文件 : DSAppleLoader.swift      DS_IAPManager.swift
+新文件 <-> 现有文件 : DSPostView.swift      DS_EmptyView.swift
+新文件 <-> 现有文件 : DSRomm.swift      DS_PostCommentModel.swift
+新文件 <-> 现有文件 : DSHome.swift      DS_LiveModel.swift
+新文件 <-> 现有文件 : DSWelcomeCurrent.swift      DS_PostModel.swift
+新文件 <-> 现有文件 : DSContact.swift      DS_UserModel.swift
+新文件 <-> 现有文件 : DSModity.swift      DS_VideoThumbnailLoader.swift
+新文件 <-> 现有文件 : DSReusable.swift      DS_AIChatScripts.swift
+新文件 <-> 现有文件 : DSFriend.swift      UserData.swift
+新文件 <-> 现有文件 : DSBase.swift      DS_GroupRoomScripts.swift
+新文件 <-> 现有文件 : DSClipGuide.swift      DS_ChatStore.swift
+新文件 <-> 现有文件 : AppDelegate.swift      AppDelegate.swift
+新文件 <-> 现有文件 : DSEmptyController.swift      DS_SecondaryVC.swift
+新文件 <-> 现有文件 : DSBlack.swift      DS_TabBar.swift
+新文件 <-> 现有文件 : DSRoomReviseController.swift      DS_TabbarVC.swift
+新文件 <-> 现有文件 : DSSecondaryLiveController.swift      DS_BaseVC.swift
+新文件 <-> 现有文件 : DSFriendTeamController.swift      DS_LaunchVC.swift
+
+
+自动为您开启5个线程进行混淆。。。。。。。
+开始自动清理源代码中的注释。。。。。。
+
+
+
+
+开始提取所有源文件中的类名并生成新类名。。。。。。
+类名: ViewController <---替换为---> DSHomeController
+类名: DS_VideoVC <---替换为---> DSSetupManagerController
+类名: DS_AIRommVC <---替换为---> DSAppleController
+类名: DS_ImageVC <---替换为---> DSEditController
+类名: DS_HomeClipItem <---替换为---> DSTabbarManagerItem
+类名: DS_HomeClipCell <---替换为---> DSProfileEditCell
+类名: DS_HomeHeaderView <---替换为---> DSNewsCoordinatorView
+类名: DS_HomeHeaderReusableView <---替换为---> DSCoverThumbnailView
+类名: DS_AIChatMessage <---替换为---> DSEditLive
+类名: DS_AIChatMessageCell <---替换为---> DSToolCell
+类名: DS_HomeTeamItem <---替换为---> DSVideoNetworkItem
+类名: DS_HomeTeamCell <---替换为---> DSScreenProfileCell
+类名: DS_HomeVC <---替换为---> DSNetworkExtensionController
+类名: DS_PushPostVC <---替换为---> DSMainController
+类名: DS_PostCommentSheetVC <---替换为---> DSScriptsController
+类名: DS_PostVC <---替换为---> DSExtensionController
+类名: DS_PostHeaderView <---替换为---> DSRommView
+类名: DS_PostFeedItem <---替换为---> DSCenterItem
+类名: DS_PostFeedCell <---替换为---> DSMoreBaseCell
+类名: DS_PostCommentCell <---替换为---> DSToolCatalogCell
+类名: DS_VideoRoomVC <---替换为---> DSListController
+类名: DS_ChatRoomContact <---替换为---> DSReport
+类名: DS_ChatRoomVC <---替换为---> DSLoginController
+类名: DS_ChatRoomMessage <---替换为---> DSEmptyPush
+类名: DS_ChatRoomMessageCell <---替换为---> DSRommManagerCell
+类名: DS_ChatAskItem <---替换为---> DSPushItem
+类名: DS_ChatAskCell <---替换为---> DSCurrentCell
+类名: DS_ChatHeaderView <---替换为---> DSLaunchCoordinatorView
+类名: DS_ChatFriendItem <---替换为---> DSCoverRegisterItem
+类名: DS_ChatFriendCell <---替换为---> DSDataCell
+类名: DS_ChatMessageItem <---替换为---> DSSetupItem
+类名: DS_ChatMessageCell <---替换为---> DSCoordinatorCell
+类名: DS_ChatVC <---替换为---> DSDelegateController
+类名: DS_BlackListVC <---替换为---> DSSecondaryController
+类名: DS_ShopVC <---替换为---> DSExtensionRegisterController
+类名: DS_ProfileVC <---替换为---> DSHomeProfileController
+类名: DS_ReviseVC <---替换为---> DSChatController
+类名: DS_PersonVC <---替换为---> DSLoginDelegateController
+类名: DS_ContactVC <---替换为---> DSRegisterController
+类名: DS_ShopPackageItem <---替换为---> DSPersonItem
+类名: DS_ReportVC <---替换为---> DSHandlingEmptyController
+类名: DS_SetupVC <---替换为---> DSContactChatController
+类名: DS_BlackListItem <---替换为---> DSCommentCreateItem
+类名: DS_BlackListCell <---替换为---> DSLaunchBaseCell
+类名: DS_PersonHeaderInfo <---替换为---> DSCover
+类名: DS_PersonHeaderView <---替换为---> DSCurrentView
+类名: DS_ProfileHeaderInfo <---替换为---> DSTabbarSign
+类名: DS_ProfileHeaderView <---替换为---> DSTeamSecondaryView
+类名: DS_ShopPackageCell <---替换为---> DSScriptsCell
+类名: DS_CreateLiveVC <---替换为---> DSFriendController
+类名: DS_GroupRoomVC <---替换为---> DSBaseBaseController
+类名: DS_LiveVC <---替换为---> DSLiveCatalogController
+类名: DS_LiveRoomItem <---替换为---> DSRegisterItem
+类名: DS_LiveRoomCell <---替换为---> DSPackageReportCell
+类名: DS_GroupRoomMessage <---替换为---> DSSetupClip
+类名: DS_GroupRoomMessageCell <---替换为---> DSExtensionMainCell
+类名: DS_LiveHeaderView <---替换为---> DSLiveImageView
+类名: DS_LiveHeaderReusableView <---替换为---> DSLiveView
+类名: DS_AppleSignInCoordinator <---替换为---> DSEditSheet
+类名: DS_LoginVC <---替换为---> DSCenterSetupController
+类名: DS_SetupInfoVC <---替换为---> DSCurrentScriptsController
+类名: DS_WelcomeVC <---替换为---> DSCoordinatorAppleController
+类名: DS_GuideVC <---替换为---> DSCatalogController
+类名: DS_NetworkTool <---替换为---> DSGuide
+类名: DS_CurrentUser <---替换为---> DSSecondaryNews
+类名: DS_IAPManager <---替换为---> DSAppleLoader
+类名: DS_EmptyView <---替换为---> DSPostView
+类名: SS_EmptyTableCell <---替换为---> DSDelegateBaseCell
+类名: DS_PostCommentModel <---替换为---> DSRomm
+类名: DS_LiveModel <---替换为---> DSHome
+类名: CreatePayload <---替换为---> DSCenter
+类名: DS_PostModel <---替换为---> DSWelcomeCurrent
+类名: DS_UserModel <---替换为---> DSContact
+类名: DS_ChatStoredMessage <---替换为---> DSListList
+类名: DS_ChatConversation <---替换为---> DSContactCenter
+类名: AppDelegate <---替换为---> AppDelegate
+类名: DS_SecondaryVC <---替换为---> DSEmptyController
+类名: DS_TabBar <---替换为---> DSBlack
+类名: DS_TabbarVC <---替换为---> DSRoomReviseController
+类名: DS_BaseVC <---替换为---> DSSecondaryLiveController
+类名: DS_LaunchVC <---替换为---> DSFriendTeamController
+
+
+开始替换所有源文件中的类名。。。。。。
+
+
+
+混淆类名耗时：0.0013880729675292969秒
+
+
+混淆图片xml资源耗时：0.9711167812347412秒
+
+
+开始替换宏定义名称。。。。。。
+
+
+
+开始提取所有协议名并生成新协议名。。。。。。
+
+
+开始翻新xib、storyboard控件ID值以及布局微调。。。。。。
+
+
+开始混淆多语言文件的key名称。。。。。。
+
+
+开始自动检测类继承关系。。。。。。
+DSHomeController : UIViewController
+DSSetupManagerController : DSEmptyController
+DSAppleController : DSEmptyController
+DSEditController : DSEmptyController
+DSProfileEditCell : UICollectionViewCell
+DSNewsCoordinatorView : UIView
+DSCoverThumbnailView : UICollectionReusableView
+DSToolCell : UITableViewCell
+DSScreenProfileCell : UICollectionViewCell
+DSNetworkExtensionController : DSSecondaryLiveController
+DSMainController : DSEmptyController
+DSScriptsController : UIViewController
+DSExtensionController : DSSecondaryLiveController
+DSRommView : UIView
+DSMoreBaseCell : UITableViewCell
+DSToolCatalogCell : UITableViewCell
+DSListController : DSEmptyController
+DSLoginController : DSEmptyController
+DSRommManagerCell : UITableViewCell
+DSCurrentCell : UITableViewCell
+DSLaunchCoordinatorView : UIView
+DSDataCell : UITableViewCell
+DSCoordinatorCell : UITableViewCell
+DSDelegateController : DSSecondaryLiveController
+DSSecondaryController : DSEmptyController
+DSExtensionRegisterController : DSEmptyController
+DSHomeProfileController : DSSecondaryLiveController
+DSChatController : DSEmptyController
+DSLoginDelegateController : DSEmptyController
+DSRegisterController : DSEmptyController
+DSHandlingEmptyController : DSEmptyController
+DSContactChatController : DSEmptyController
+DSLaunchBaseCell : UICollectionViewCell
+DSCurrentView : UIView
+DSTeamSecondaryView : UIView
+DSScriptsCell : UICollectionViewCell
+DSFriendController : DSEmptyController
+DSBaseBaseController : DSEmptyController
+DSLiveCatalogController : DSSecondaryLiveController
+DSPackageReportCell : UICollectionViewCell
+DSExtensionMainCell : UITableViewCell
+DSLiveImageView : UIView
+DSLiveView : UICollectionReusableView
+DSEditSheet : NSObject
+DSCenterSetupController : DSSecondaryLiveController
+DSCurrentScriptsController : DSSecondaryLiveController
+DSCoordinatorAppleController : DSSecondaryLiveController
+DSCatalogController : DSSecondaryLiveController
+DSPostView : UIView
+DSDelegateBaseCell : UITableViewCell
+AppDelegate : UIResponder
+DSEmptyController : DSSecondaryLiveController
+DSBlack : UITabBar
+DSRoomReviseController : UITabBarController
+DSSecondaryLiveController : UIViewController
+DSFriendTeamController : UIViewController
+
+
+开始自动检测统计所有文件中属性信息。。。。。。
+
+
+开始自动修改Assets图片资源。。。。。。。
+
+Assets图片资源修改结束
+
+
+开始自动修改sks资源名称。。。。。。。
+
+sks资源修改结束
+
+开始打乱函数定义顺序。。。。。。。
+100%👌
+
+
+开始混淆函数里面局部变量名称。。。。。。。
+文件: [旧 DS_SetupVC <--> 新 DSContactChatController] 局部变量: button -> dimmingButton
+文件: [旧 DS_SetupVC <--> 新 DSContactChatController] 局部变量: stack -> follow
+文件: [旧 DS_SetupVC <--> 新 DSContactChatController] 局部变量: alert -> option
+文件: [旧 DS_SetupVC <--> 新 DSContactChatController] 局部变量: alert -> option
+文件: [旧 DS_GuideVC <--> 新 DSCatalogController] 局部变量: button -> dimmingButton
+文件: [旧 DS_GuideVC <--> 新 DSCatalogController] 局部变量: image -> greenImage
+文件: [旧 DS_ProfileVC <--> 新 DSHomeProfileController] 局部变量: width -> creation
+文件: [旧 DS_ProfileVC <--> 新 DSHomeProfileController] 局部变量: width -> creation
+文件: [旧 DS_ProfileVC <--> 新 DSHomeProfileController] 局部变量: item -> visibleItem
+文件: [旧 DS_ProfileVC <--> 新 DSHomeProfileController] 局部变量: post -> border
+文件: [旧 DS_PostCommentSheetVC <--> 新 DSScriptsController] 局部变量: textField -> person
+文件: [旧 DS_PostCommentSheetVC <--> 新 DSScriptsController] 局部变量: button -> dimmingButton
+文件: [旧 DS_PostCommentSheetVC <--> 新 DSScriptsController] 局部变量: sheet -> check
+文件: [旧 DS_PostCommentSheetVC <--> 新 DSScriptsController] 局部变量: tap -> presenting
+文件: [旧 DS_PostCommentSheetVC <--> 新 DSScriptsController] 局部变量: text -> handling
+文件: [旧 DS_PostCommentSheetVC <--> 新 DSScriptsController] 局部变量: lastRow -> semaphore
+文件: [旧 DS_HomeClipCell <--> 新 DSProfileEditCell] 局部变量: coverImage -> trimmedImage
+文件: [旧 DS_HomeClipCell <--> 新 DSProfileEditCell] 局部变量: tap -> presenting
+文件: [旧 DS_CreateLiveVC <--> 新 DSFriendController] 局部变量: button -> dimmingButton
+文件: [旧 DS_CreateLiveVC <--> 新 DSFriendController] 局部变量: textField -> person
+文件: [旧 DS_CreateLiveVC <--> 新 DSFriendController] 局部变量: button -> dimmingButton
+文件: [旧 DS_CreateLiveVC <--> 新 DSFriendController] 局部变量: button -> dimmingButton
+文件: [旧 DS_CreateLiveVC <--> 新 DSFriendController] 局部变量: tap -> presenting
+文件: [旧 DS_CreateLiveVC <--> 新 DSFriendController] 局部变量: configuration -> secondary
+文件: [旧 DS_CreateLiveVC <--> 新 DSFriendController] 局部变量: picker -> edges
+文件: [旧 DS_CreateLiveVC <--> 新 DSFriendController] 局部变量: title -> coverm
+文件: [旧 DS_AIRommVC <--> 新 DSAppleController] 局部变量: button -> dimmingButton
+文件: [旧 DS_AIRommVC <--> 新 DSAppleController] 局部变量: config -> tab
+文件: [旧 DS_AIRommVC <--> 新 DSAppleController] 局部变量: textField -> person
+文件: [旧 DS_AIRommVC <--> 新 DSAppleController] 局部变量: button -> dimmingButton
+文件: [旧 DS_AIRommVC <--> 新 DSAppleController] 局部变量: indexPath -> radius
+文件: [旧 DS_AIRommVC <--> 新 DSAppleController] 局部变量: text -> handling
+文件: [旧 DS_AIRommVC <--> 新 DSAppleController] 局部变量: work -> has
+文件: [旧 DS_ReviseVC <--> 新 DSChatController] 局部变量: button -> dimmingButton
+文件: [旧 DS_ReviseVC <--> 新 DSChatController] 局部变量: button -> dimmingButton
+文件: [旧 DS_ReviseVC <--> 新 DSChatController] 局部变量: textField -> person
+文件: [旧 DS_ReviseVC <--> 新 DSChatController] 局部变量: button -> dimmingButton
+文件: [旧 DS_ReviseVC <--> 新 DSChatController] 局部变量: tap -> presenting
+文件: [旧 DS_ReviseVC <--> 新 DSChatController] 局部变量: configuration -> secondary
+文件: [旧 DS_ReviseVC <--> 新 DSChatController] 局部变量: picker -> edges
+文件: [旧 DS_VideoRoomVC <--> 新 DSListController] 局部变量: button -> dimmingButton
+文件: [旧 DS_VideoRoomVC <--> 新 DSListController] 局部变量: button -> dimmingButton
+文件: [旧 DS_VideoRoomVC <--> 新 DSListController] 局部变量: stack -> follow
+文件: [旧 DS_VideoRoomVC <--> 新 DSListController] 局部变量: button -> dimmingButton
+文件: [旧 DS_VideoRoomVC <--> 新 DSListController] 局部变量: cameraStatus -> launch
+文件: [旧 DS_VideoRoomVC <--> 新 DSListController] 局部变量: micStatus -> list
+文件: [旧 DS_VideoRoomVC <--> 新 DSListController] 局部变量: alert -> option
+文件: [旧 DS_VideoRoomVC <--> 新 DSListController] 局部变量: audioInput -> keys
+文件: [旧 DS_VideoRoomVC <--> 新 DSListController] 局部变量: previewLayer -> pause
+文件: [旧 DS_VideoRoomVC <--> 新 DSListController] 局部变量: input -> ratio
+文件: [旧 DS_VideoRoomVC <--> 新 DSListController] 局部变量: nextPosition -> clips
+文件: [旧 DS_HomeHeaderView <--> 新 DSNewsCoordinatorView] 局部变量: layout -> toggle
+文件: [旧 DS_HomeHeaderView <--> 新 DSNewsCoordinatorView] 局部变量: collectionView -> fullView
+文件: [旧 DS_HomeHeaderView <--> 新 DSNewsCoordinatorView] 局部变量: tap -> presenting
+文件: [旧 DS_HomeHeaderView <--> 新 DSNewsCoordinatorView] 局部变量: item -> visibleItem
+文件: [旧 DS_ChatStore <--> 新 DSClipGuide] 局部变量: trimmed -> conversationsV
+文件: [旧 DS_ChatStore <--> 新 DSClipGuide] 局部变量: message -> edit
+文件: [旧 DS_ChatStore <--> 新 DSClipGuide] 局部变量: conversations -> list
+文件: [旧 DS_ChatStore <--> 新 DSClipGuide] 局部变量: conversations -> list
+文件: [旧 DS_ChatStore <--> 新 DSClipGuide] 局部变量: conversations -> list
+文件: [旧 DS_ChatStore <--> 新 DSClipGuide] 局部变量: decoded -> system
+文件: [旧 DS_ChatStore <--> 新 DSClipGuide] 局部变量: date -> network
+文件: [旧 DS_ChatStore <--> 新 DSClipGuide] 局部变量: formatter -> trailing
+文件: [旧 DS_AIChatMessageCell <--> 新 DSToolCell] 局部变量: isAI -> sel
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: email -> tracks
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: base -> primary
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: user -> screen
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: normalized -> overlap
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: email -> tracks
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: trimmedName -> random
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: email -> tracks
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: userId -> mic
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: email -> tracks
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: avatarPath -> views
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: newUser -> window_g
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: trimmedName -> random
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: avatarPath -> views
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: updatedUser -> kept
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: userId -> mic
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: account -> gradient
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: newUser -> window_g
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: trimmedContent -> tapped
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: postId -> sign
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: mediaUrl -> range
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: videoCoverUrl -> timeout
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: post -> border
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: updatedUser -> kept
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: postsById -> profile
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: trimmed -> conversationsV
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: comment -> items
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: extra -> picker
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: updatedPost -> back
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: extra -> picker
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: byId -> loader
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: posts -> mail
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: owner -> bundled
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: posts -> mail
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: removedPosts -> play
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: updatedUser -> kept
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: trimmedTitle -> permissions
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: roomId -> corner
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: memberAvatars -> rooms
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: room -> passwordY
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: updatedUser -> kept
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: room -> passwordY
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: updatedUser -> kept
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: updatedUser -> kept
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: trimmedName -> random
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: finalName -> createds
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: avatarPath -> views
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: updatedPosts -> feed
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: updatedRooms -> commentators
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: updatedUser -> kept
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: base -> primary
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: merged -> package
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: posts -> mail
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: newValue -> cache
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: ids -> option
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: testId -> layout
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: data -> leading
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: directory -> logged
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: fileURL -> total
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: directory -> logged
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: fileURL -> total
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: url -> postP
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: fileURL -> total
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: fileManager -> doc
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: directory -> logged
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: fileURL -> total
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: userId -> mic
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: account -> gradient
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: cleanedComments -> top
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: kept -> loader7
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: parts -> bubble
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: keysToRemove -> task
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: url -> postP
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: docs -> type_q3
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: avatarURL -> result
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: directory -> logged
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: decoded -> system
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: users -> sandbox
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: migrated -> topD
+文件: [旧 DS_CurrentUser <--> 新 DSSecondaryNews] 局部变量: migrated -> topD
+文件: [旧 DS_IAPManager <--> 新 DSAppleLoader] 局部变量: products -> switch_1
+文件: [旧 DS_IAPManager <--> 新 DSAppleLoader] 局部变量: product -> all
+文件: [旧 DS_IAPManager <--> 新 DSAppleLoader] 局部变量: fetched -> session
+文件: [旧 DS_IAPManager <--> 新 DSAppleLoader] 局部变量: transaction -> fetchedH
+文件: [旧 DS_IAPManager <--> 新 DSAppleLoader] 局部变量: diamonds -> path
+文件: [旧 DS_ChatAskCell <--> 新 DSCurrentCell] 局部变量: button -> dimmingButton
+文件: [旧 DS_ChatAskCell <--> 新 DSCurrentCell] 局部变量: imageName -> empty
+文件: [旧 DS_PushPostVC <--> 新 DSMainController] 局部变量: button -> dimmingButton
+文件: [旧 DS_PushPostVC <--> 新 DSMainController] 局部变量: stack -> follow
+文件: [旧 DS_PushPostVC <--> 新 DSMainController] 局部变量: button -> dimmingButton
+文件: [旧 DS_PushPostVC <--> 新 DSMainController] 局部变量: button -> dimmingButton
+文件: [旧 DS_PushPostVC <--> 新 DSMainController] 局部变量: button -> dimmingButton
+文件: [旧 DS_PushPostVC <--> 新 DSMainController] 局部变量: configuration -> secondary
+文件: [旧 DS_PushPostVC <--> 新 DSMainController] 局部变量: picker -> edges
+文件: [旧 DS_PushPostVC <--> 新 DSMainController] 局部变量: content -> play
+文件: [旧 DS_PushPostVC <--> 新 DSMainController] 局部变量: balance -> completion
+文件: [旧 DS_PushPostVC <--> 新 DSMainController] 局部变量: mediaType -> next
+文件: [旧 DS_PushPostVC <--> 新 DSMainController] 局部变量: image -> greenImage
+文件: [旧 DS_PushPostVC <--> 新 DSMainController] 局部变量: videoURL -> switch_fj
+文件: [旧 DS_PushPostVC <--> 新 DSMainController] 局部变量: didPublish -> safe
+文件: [旧 DS_PushPostVC <--> 新 DSMainController] 局部变量: directory -> logged
+文件: [旧 DS_PushPostVC <--> 新 DSMainController] 局部变量: destinationURL -> config
+文件: [旧 DS_ProfileHeaderView <--> 新 DSTeamSecondaryView] 局部变量: button -> dimmingButton
+文件: [旧 DS_ProfileHeaderView <--> 新 DSTeamSecondaryView] 局部变量: button -> dimmingButton
+文件: [旧 DS_ProfileHeaderView <--> 新 DSTeamSecondaryView] 局部变量: button -> dimmingButton
+文件: [旧 DS_ProfileHeaderView <--> 新 DSTeamSecondaryView] 局部变量: avatar -> configured
+文件: [旧 DS_ProfileHeaderView <--> 新 DSTeamSecondaryView] 局部变量: avatar -> configured
+文件: [旧 DS_BlackListVC <--> 新 DSSecondaryController] 局部变量: button -> dimmingButton
+文件: [旧 DS_BlackListVC <--> 新 DSSecondaryController] 局部变量: layout -> toggle
+文件: [旧 DS_BlackListVC <--> 新 DSSecondaryController] 局部变量: totalHorizontalInset -> follow
+文件: [旧 DS_BlackListVC <--> 新 DSSecondaryController] 局部变量: width -> creation
+文件: [旧 DS_BlackListVC <--> 新 DSSecondaryController] 局部变量: height -> exclude
+文件: [旧 DS_BlackListVC <--> 新 DSSecondaryController] 局部变量: userId -> mic
+文件: [旧 DS_AppleSignInCoordinator <--> 新 DSEditSheet] 局部变量: subject -> background
+文件: [旧 DS_AppleSignInCoordinator <--> 新 DSEditSheet] 局部变量: suggestedName -> seconds
+文件: [旧 DS_AppleSignInCoordinator <--> 新 DSEditSheet] 局部变量: setupVC -> selController
+文件: [旧 DS_AppleSignInCoordinator <--> 新 DSEditSheet] 局部变量: provider -> setup
+文件: [旧 DS_AppleSignInCoordinator <--> 新 DSEditSheet] 局部变量: request -> inset
+文件: [旧 DS_AppleSignInCoordinator <--> 新 DSEditSheet] 局部变量: controller -> previewController
+文件: [旧 DS_AppleSignInCoordinator <--> 新 DSEditSheet] 局部变量: nsError -> preset
+文件: [旧 DS_LiveRoomCell <--> 新 DSPackageReportCell] 局部变量: button -> dimmingButton
+文件: [旧 DS_LiveRoomCell <--> 新 DSPackageReportCell] 局部变量: path -> d_count
+文件: [旧 DS_BlackListCell <--> 新 DSLaunchBaseCell] 局部变量: button -> dimmingButton
+文件: [旧 DS_ShopCatalog <--> 新 DSClip] 局部变量: formatter -> trailing
+文件: [旧 DS_ChatFriendCell <--> 新 DSDataCell] 局部变量: button -> dimmingButton
+文件: [旧 DS_ShopVC <--> 新 DSExtensionRegisterController] 局部变量: button -> dimmingButton
+文件: [旧 DS_ShopVC <--> 新 DSExtensionRegisterController] 局部变量: layout -> toggle
+文件: [旧 DS_ShopVC <--> 新 DSExtensionRegisterController] 局部变量: button -> dimmingButton
+文件: [旧 DS_ShopVC <--> 新 DSExtensionRegisterController] 局部变量: balance -> completion
+文件: [旧 DS_ShopVC <--> 新 DSExtensionRegisterController] 局部变量: prices -> creation
+文件: [旧 DS_ShopVC <--> 新 DSExtensionRegisterController] 局部变量: package -> black
+文件: [旧 DS_ShopVC <--> 新 DSExtensionRegisterController] 局部变量: diamonds -> path
+文件: [旧 DS_ShopVC <--> 新 DSExtensionRegisterController] 局部变量: message -> edit
+文件: [旧 DS_ShopVC <--> 新 DSExtensionRegisterController] 局部变量: item -> visibleItem
+文件: [旧 DS_ShopVC <--> 新 DSExtensionRegisterController] 局部变量: previousIndex -> tracks
+文件: [旧 DS_ShopVC <--> 新 DSExtensionRegisterController] 局部变量: width -> creationS
+文件: [旧 DS_TabBar <--> 新 DSBlack] 局部变量: className -> cached
+文件: [旧 DS_TabBar <--> 新 DSBlack] 局部变量: fittedSize -> normalized
+文件: [旧 UIColor+Extension <--> 新 DSModityApple] 局部变量: mask -> auto_w
+文件: [旧 UIColor+Extension <--> 新 DSModityApple] 局部变量: normalized -> overlap
+文件: [旧 DS_PostVC <--> 新 DSExtensionController] 局部变量: posts -> mail
+文件: [旧 DS_PostVC <--> 新 DSExtensionController] 局部变量: resolved -> coins
+文件: [旧 DS_PostVC <--> 新 DSExtensionController] 局部变量: width -> creation
+文件: [旧 DS_PostVC <--> 新 DSExtensionController] 局部变量: width -> creation
+文件: [旧 DS_PostVC <--> 新 DSExtensionController] 局部变量: item -> visibleItem
+文件: [旧 DS_PostVC <--> 新 DSExtensionController] 局部变量: userId -> mic
+文件: [旧 DS_PostVC <--> 新 DSExtensionController] 局部变量: post -> border
+文件: [旧 DS_PostVC <--> 新 DSExtensionController] 局部变量: post -> border
+文件: [旧 AppDelegate <--> 新 AppDelegate] 局部变量: launchVC -> bottomController
+文件: [旧 DS_WelcomeVC <--> 新 DSCoordinatorAppleController] 局部变量: stack -> follow
+文件: [旧 DS_WelcomeVC <--> 新 DSCoordinatorAppleController] 局部变量: button -> dimmingButton
+文件: [旧 DS_WelcomeVC <--> 新 DSCoordinatorAppleController] 局部变量: config -> tab
+文件: [旧 DS_WelcomeVC <--> 新 DSCoordinatorAppleController] 局部变量: attributes -> layout
+文件: [旧 DS_WelcomeVC <--> 新 DSCoordinatorAppleController] 局部变量: symbolConfig -> last
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: fileName -> scroll
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: coverName -> prefix_g
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: presetByPostId -> registered
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: posts -> mail
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: presetPost -> documents
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: exclude -> raw
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: pool -> row
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: shuffled -> ready
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: path -> d_count
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: paths -> subject
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: fillers -> romm
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: docsPath -> attributes
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: fullPath -> indicator
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: filePath -> configured
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: docsPath -> attributes
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: sandboxURL -> mode
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: filePath -> configured
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: directURL -> identifier
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: fileName -> scroll
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: name -> check
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: ext -> visible
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: components -> lastb
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: name -> check
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: ext -> visible
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: extensionArg -> index
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: subdirectory -> ago
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: posts -> mail
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: rooms -> hostb
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: baseUsers -> created
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: posts -> mail
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: commentators -> merged
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: comments -> data
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: count -> feed
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: phraseCount -> clear
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: comments -> data
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: usedPhraseIndices -> welcome
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: seed -> banner
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: authorSeed -> label
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: author -> footer
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: phraseIndex -> capture
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: offset -> path
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: hoursAgo -> phraseCQ
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: userId -> mic
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: avatarPath -> views
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: coverPath -> o_center
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: videoPath -> control
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: videoCoverPath -> total
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: imagePath -> provider
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: videoPost -> providerA
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: imagePost -> pending
+文件: [旧 UserData <--> 新 DSFriend] 局部变量: liveRoom -> files
+文件: [旧 DS_ChatRoomMessageCell <--> 新 DSRommManagerCell] 局部变量: isPeer -> lines
+文件: [旧 DS_PostFeedMoreHandling <--> 新 DSImage] 局部变量: alert -> option
+文件: [旧 DS_GroupRoomVC <--> 新 DSBaseBaseController] 局部变量: button -> dimmingButton
+文件: [旧 DS_GroupRoomVC <--> 新 DSBaseBaseController] 局部变量: button -> dimmingButton
+文件: [旧 DS_GroupRoomVC <--> 新 DSBaseBaseController] 局部变量: button -> dimmingButton
+文件: [旧 DS_GroupRoomVC <--> 新 DSBaseBaseController] 局部变量: textField -> person
+文件: [旧 DS_GroupRoomVC <--> 新 DSBaseBaseController] 局部变量: button -> dimmingButton
+文件: [旧 DS_GroupRoomVC <--> 新 DSBaseBaseController] 局部变量: avatarPaths -> register_hi
+文件: [旧 DS_GroupRoomVC <--> 新 DSBaseBaseController] 局部变量: path -> d_count
+文件: [旧 DS_GroupRoomVC <--> 新 DSBaseBaseController] 局部变量: width -> creation
+文件: [旧 DS_GroupRoomVC <--> 新 DSBaseBaseController] 局部变量: isFirstMemberMessage -> opacity
+文件: [旧 DS_GroupRoomVC <--> 新 DSBaseBaseController] 局部变量: delay -> host
+文件: [旧 DS_GroupRoomVC <--> 新 DSBaseBaseController] 局部变量: text -> handling
+文件: [旧 DS_GroupRoomVC <--> 新 DSBaseBaseController] 局部变量: avatarPath -> views
+文件: [旧 DS_GroupRoomVC <--> 新 DSBaseBaseController] 局部变量: message -> edit
+文件: [旧 DS_GroupRoomVC <--> 新 DSBaseBaseController] 局部变量: lastRow -> semaphore
+文件: [旧 DS_GroupRoomVC <--> 新 DSBaseBaseController] 局部变量: alert -> option
+文件: [旧 DS_GroupRoomVC <--> 新 DSBaseBaseController] 局部变量: text -> handling
+文件: [旧 DS_GroupRoomVC <--> 新 DSBaseBaseController] 局部变量: me -> recommend
+文件: [旧 DS_GroupRoomVC <--> 新 DSBaseBaseController] 局部变量: message -> edit
+文件: [旧 DS_VideoVC <--> 新 DSSetupManagerController] 局部变量: button -> dimmingButton
+文件: [旧 DS_VideoVC <--> 新 DSSetupManagerController] 局部变量: button -> dimmingButton
+文件: [旧 DS_VideoVC <--> 新 DSSetupManagerController] 局部变量: tap -> presenting
+文件: [旧 DS_VideoVC <--> 新 DSSetupManagerController] 局部变量: url -> postP
+文件: [旧 DS_VideoVC <--> 新 DSSetupManagerController] 局部变量: item -> visibleItem
+文件: [旧 DS_VideoVC <--> 新 DSSetupManagerController] 局部变量: player -> seed
+文件: [旧 DS_VideoVC <--> 新 DSSetupManagerController] 局部变量: layer -> lines
+文件: [旧 DS_VideoVC <--> 新 DSSetupManagerController] 局部变量: gradient -> field
+文件: [旧 DS_NetworkTool <--> 新 DSGuide] 局部变量: request -> inset
+文件: [旧 DS_PersonVC <--> 新 DSLoginDelegateController] 局部变量: width -> creation
+文件: [旧 DS_PersonVC <--> 新 DSLoginDelegateController] 局部变量: height -> exclude
+文件: [旧 DS_PersonVC <--> 新 DSLoginDelegateController] 局部变量: height -> exclude
+文件: [旧 DS_PersonVC <--> 新 DSLoginDelegateController] 局部变量: width -> creation
+文件: [旧 DS_PersonVC <--> 新 DSLoginDelegateController] 局部变量: contact -> report
+文件: [旧 DS_PersonVC <--> 新 DSLoginDelegateController] 局部变量: item -> visibleItem
+文件: [旧 DS_PersonVC <--> 新 DSLoginDelegateController] 局部变量: post -> border
+文件: [旧 DS_ReportVC <--> 新 DSHandlingEmptyController] 局部变量: alert -> option
+文件: [旧 DS_HomeTeamCell <--> 新 DSScreenProfileCell] 局部变量: tap -> presenting
+文件: [旧 DS_HomeVC <--> 新 DSNetworkExtensionController] 局部变量: layout -> toggle
+文件: [旧 DS_HomeVC <--> 新 DSNetworkExtensionController] 局部变量: teamItems -> time_c1
+文件: [旧 DS_HomeVC <--> 新 DSNetworkExtensionController] 局部变量: totalHorizontalInset -> follow
+文件: [旧 DS_HomeVC <--> 新 DSNetworkExtensionController] 局部变量: width -> creation
+文件: [旧 DS_HomeVC <--> 新 DSNetworkExtensionController] 局部变量: height -> exclude
+文件: [旧 DS_HomeVC <--> 新 DSNetworkExtensionController] 局部变量: width -> creation
+文件: [旧 DS_HomeVC <--> 新 DSNetworkExtensionController] 局部变量: height -> exclude
+文件: [旧 DS_HomeVC <--> 新 DSNetworkExtensionController] 局部变量: item -> visibleItem
+文件: [旧 DS_HomeVC <--> 新 DSNetworkExtensionController] 局部变量: videoVC -> displayController
+文件: [旧 DS_HomeVC <--> 新 DSNetworkExtensionController] 局部变量: header -> nameHeader
+文件: [旧 DS_VideoThumbnailLoader <--> 新 DSModity] 局部变量: cacheKey -> layout
+文件: [旧 DS_VideoThumbnailLoader <--> 新 DSModity] 局部变量: image -> greenImage
+文件: [旧 DS_VideoThumbnailLoader <--> 新 DSModity] 局部变量: cacheKey -> layout
+文件: [旧 DS_VideoThumbnailLoader <--> 新 DSModity] 局部变量: asset -> anew_0
+文件: [旧 DS_VideoThumbnailLoader <--> 新 DSModity] 局部变量: tracks -> jnews
+文件: [旧 DS_VideoThumbnailLoader <--> 新 DSModity] 局部变量: work -> has
+文件: [旧 DS_VideoThumbnailLoader <--> 新 DSModity] 局部变量: asset -> anew_0
+文件: [旧 DS_VideoThumbnailLoader <--> 新 DSModity] 局部变量: semaphore -> statusr
+文件: [旧 DS_VideoThumbnailLoader <--> 新 DSModity] 局部变量: error -> time_dk
+文件: [旧 DS_VideoThumbnailLoader <--> 新 DSModity] 局部变量: generator -> alert
+文件: [旧 DS_VideoThumbnailLoader <--> 新 DSModity] 局部变量: candidateSeconds -> hours
+文件: [旧 DS_VideoThumbnailLoader <--> 新 DSModity] 局部变量: generator -> alert
+文件: [旧 DS_VideoThumbnailLoader <--> 新 DSModity] 局部变量: candidateSeconds -> hours
+文件: [旧 DS_VideoThumbnailLoader <--> 新 DSModity] 局部变量: total -> loading
+文件: [旧 DS_VideoThumbnailLoader <--> 新 DSModity] 局部变量: cgImage -> productImage
+文件: [旧 DS_ImageVC <--> 新 DSEditController] 局部变量: button -> dimmingButton
+文件: [旧 DS_ImageVC <--> 新 DSEditController] 局部变量: gradient -> field
+文件: [旧 DS_TabbarVC <--> 新 DSRoomReviseController] 局部变量: appearance -> scrollz
+文件: [旧 DS_TabbarVC <--> 新 DSRoomReviseController] 局部变量: item -> visibleItem
+文件: [旧 DS_TabbarVC <--> 新 DSRoomReviseController] 局部变量: controller -> previewController
+文件: [旧 DS_TabbarVC <--> 新 DSRoomReviseController] 局部变量: welcome -> product
+文件: [旧 DS_SetupInfoVC <--> 新 DSCurrentScriptsController] 局部变量: suggestedName -> seconds
+文件: [旧 DS_SetupInfoVC <--> 新 DSCurrentScriptsController] 局部变量: action -> result
+文件: [旧 DS_SetupInfoVC <--> 新 DSCurrentScriptsController] 局部变量: attributed -> own
+文件: [旧 DS_SetupInfoVC <--> 新 DSCurrentScriptsController] 局部变量: tap -> presenting
+文件: [旧 DS_SetupInfoVC <--> 新 DSCurrentScriptsController] 局部变量: configuration -> secondary
+文件: [旧 DS_SetupInfoVC <--> 新 DSCurrentScriptsController] 局部变量: picker -> edges
+文件: [旧 DS_SetupInfoVC <--> 新 DSCurrentScriptsController] 局部变量: loginVC -> pricesController
+文件: [旧 DS_SetupInfoVC <--> 新 DSCurrentScriptsController] 局部变量: viewControllers -> clip
+文件: [旧 DS_SetupInfoVC <--> 新 DSCurrentScriptsController] 局部变量: name -> check
+文件: [旧 DS_SetupInfoVC <--> 新 DSCurrentScriptsController] 局部变量: email -> tracks
+文件: [旧 DS_ChatHeaderView <--> 新 DSLaunchCoordinatorView] 局部变量: stack -> follow
+文件: [旧 DS_ChatHeaderView <--> 新 DSLaunchCoordinatorView] 局部变量: buttonTab -> bottom
+文件: [旧 DS_ChatHeaderView <--> 新 DSLaunchCoordinatorView] 局部变量: button -> dimmingButton
+文件: [旧 DS_LiveHeaderView <--> 新 DSLiveImageView] 局部变量: button -> dimmingButton
+文件: [旧 DS_PersonHeaderView <--> 新 DSCurrentView] 局部变量: button -> dimmingButton
+文件: [旧 DS_PersonHeaderView <--> 新 DSCurrentView] 局部变量: button -> dimmingButton
+文件: [旧 DS_PersonHeaderView <--> 新 DSCurrentView] 局部变量: button -> dimmingButton
+文件: [旧 DS_PersonHeaderView <--> 新 DSCurrentView] 局部变量: imageName -> empty
+文件: [旧 DS_PostFeedCell <--> 新 DSMoreBaseCell] 局部变量: button -> dimmingButton
+文件: [旧 DS_PostFeedCell <--> 新 DSMoreBaseCell] 局部变量: button -> dimmingButton
+文件: [旧 DS_PostFeedCell <--> 新 DSMoreBaseCell] 局部变量: isVideo -> next
+文件: [旧 DS_PostFeedCell <--> 新 DSMoreBaseCell] 局部变量: hasMedia -> normalized
+文件: [旧 DS_PostFeedCell <--> 新 DSMoreBaseCell] 局部变量: coverImage -> trimmedImage
+文件: [旧 DS_PostFeedCell <--> 新 DSMoreBaseCell] 局部变量: tap -> presenting
+文件: [旧 DS_ContactVC <--> 新 DSRegisterController] 局部变量: button -> dimmingButton
+文件: [旧 DS_ContactVC <--> 新 DSRegisterController] 局部变量: label -> placeholderLabel
+文件: [旧 DS_ContactVC <--> 新 DSRegisterController] 局部变量: tap -> presenting
+文件: [旧 DS_ContactVC <--> 新 DSRegisterController] 局部变量: button -> dimmingButton
+文件: [旧 DS_ContactVC <--> 新 DSRegisterController] 局部变量: encoded -> error
+文件: [旧 DS_ChatRoomVC <--> 新 DSLoginController] 局部变量: button -> dimmingButton
+文件: [旧 DS_ChatRoomVC <--> 新 DSLoginController] 局部变量: config -> tab
+文件: [旧 DS_ChatRoomVC <--> 新 DSLoginController] 局部变量: button -> dimmingButton
+文件: [旧 DS_ChatRoomVC <--> 新 DSLoginController] 局部变量: button -> dimmingButton
+文件: [旧 DS_ChatRoomVC <--> 新 DSLoginController] 局部变量: textField -> person
+文件: [旧 DS_ChatRoomVC <--> 新 DSLoginController] 局部变量: button -> dimmingButton
+文件: [旧 DS_ChatRoomVC <--> 新 DSLoginController] 局部变量: indexPath -> radius
+文件: [旧 DS_ChatRoomVC <--> 新 DSLoginController] 局部变量: videoRoom -> avatarQ
+文件: [旧 DS_ChatRoomVC <--> 新 DSLoginController] 局部变量: text -> handling
+文件: [旧 DS_LiveVC <--> 新 DSLiveCatalogController] 局部变量: currentUserId -> did
+文件: [旧 DS_LiveVC <--> 新 DSLiveCatalogController] 局部变量: layout -> toggle
+文件: [旧 DS_LiveVC <--> 新 DSLiveCatalogController] 局部变量: rooms -> hostb
+文件: [旧 DS_LiveVC <--> 新 DSLiveCatalogController] 局部变量: existingIds -> own
+文件: [旧 DS_LiveVC <--> 新 DSLiveCatalogController] 局部变量: extra -> picker
+文件: [旧 DS_LiveVC <--> 新 DSLiveCatalogController] 局部变量: currentUserId -> did
+文件: [旧 DS_LiveVC <--> 新 DSLiveCatalogController] 局部变量: myRooms -> latest
+文件: [旧 DS_LiveVC <--> 新 DSLiveCatalogController] 局部变量: avatarPaths -> register_hi
+文件: [旧 DS_LiveVC <--> 新 DSLiveCatalogController] 局部变量: avatars -> revise
+文件: [旧 DS_LiveVC <--> 新 DSLiveCatalogController] 局部变量: topOffsetY -> trimmed
+文件: [旧 DS_LiveVC <--> 新 DSLiveCatalogController] 局部变量: totalHorizontalInset -> follow
+文件: [旧 DS_LiveVC <--> 新 DSLiveCatalogController] 局部变量: width -> creation
+文件: [旧 DS_LiveVC <--> 新 DSLiveCatalogController] 局部变量: height -> exclude
+文件: [旧 DS_LiveVC <--> 新 DSLiveCatalogController] 局部变量: alert -> option
+文件: [旧 DS_LiveVC <--> 新 DSLiveCatalogController] 局部变量: width -> creation
+文件: [旧 DS_LiveVC <--> 新 DSLiveCatalogController] 局部变量: layout -> toggle
+文件: [旧 DS_LiveVC <--> 新 DSLiveCatalogController] 局部变量: header -> nameHeader
+文件: [旧 DS_LiveVC <--> 新 DSLiveCatalogController] 局部变量: roomId -> corner
+文件: [旧 DS_LiveVC <--> 新 DSLiveCatalogController] 局部变量: rooms -> hostb
+文件: [旧 DS_LiveVC <--> 新 DSLiveCatalogController] 局部变量: room -> passwordY
+文件: [旧 DS_LiveVC <--> 新 DSLiveCatalogController] 局部变量: scriptIndex -> o_position
+文件: [旧 DS_LiveVC <--> 新 DSLiveCatalogController] 局部变量: groupVC -> coverController
+文件: [旧 DS_BaseVC <--> 新 DSSecondaryLiveController] 局部变量: alert -> option
+文件: [旧 DS_BaseVC <--> 新 DSSecondaryLiveController] 局部变量: displayName -> messages
+文件: [旧 DS_BaseVC <--> 新 DSSecondaryLiveController] 局部变量: alert -> option
+文件: [旧 DS_LoginVC <--> 新 DSCenterSetupController] 局部变量: button -> dimmingButton
+文件: [旧 DS_LoginVC <--> 新 DSCenterSetupController] 局部变量: button -> dimmingButton
+文件: [旧 DS_LoginVC <--> 新 DSCenterSetupController] 局部变量: button -> dimmingButton
+文件: [旧 DS_LoginVC <--> 新 DSCenterSetupController] 局部变量: button -> dimmingButton
+文件: [旧 DS_LoginVC <--> 新 DSCenterSetupController] 局部变量: button -> dimmingButton
+文件: [旧 DS_LoginVC <--> 新 DSCenterSetupController] 局部变量: updates -> dateX
+文件: [旧 DS_LoginVC <--> 新 DSCenterSetupController] 局部变量: full -> blur
+文件: [旧 DS_LoginVC <--> 新 DSCenterSetupController] 局部变量: attributed -> own
+文件: [旧 DS_LoginVC <--> 新 DSCenterSetupController] 局部变量: label -> placeholderLabel
+文件: [旧 DS_LoginVC <--> 新 DSCenterSetupController] 局部变量: inset -> nav
+文件: [旧 DS_LoginVC <--> 新 DSCenterSetupController] 局部变量: buttonSize -> presenting
+文件: [旧 DS_LoginVC <--> 新 DSCenterSetupController] 局部变量: containerWidth -> password
+文件: [旧 DS_LoginVC <--> 新 DSCenterSetupController] 局部变量: container -> play
+文件: [旧 DS_LoginVC <--> 新 DSCenterSetupController] 局部变量: textField -> person
+文件: [旧 DS_LoginVC <--> 新 DSCenterSetupController] 局部变量: account -> gradient
+文件: [旧 DS_LoginVC <--> 新 DSCenterSetupController] 局部变量: password -> has
+文件: [旧 DS_PostHeaderView <--> 新 DSRommView] 局部变量: button -> dimmingButton
+文件: [旧 DS_ShopPackageCell <--> 新 DSScriptsCell] 局部变量: imageName -> empty
+文件: [旧 DS_GroupRoomScripts <--> 新 DSBase] 局部变量: safeIndex -> back
+文件: [旧 DS_ChatVC <--> 新 DSDelegateController] 局部变量: width -> creation
+文件: [旧 DS_ChatVC <--> 新 DSDelegateController] 局部变量: height -> exclude
+文件: [旧 DS_ChatVC <--> 新 DSDelegateController] 局部变量: finalHeight -> ratio
+文件: [旧 DS_ChatVC <--> 新 DSDelegateController] 局部变量: item -> visibleItem
+文件: [旧 DS_ChatVC <--> 新 DSDelegateController] 局部变量: item -> visibleItem
+文件: [旧 DS_ChatVC <--> 新 DSDelegateController] 局部变量: item -> visibleItem
+文件: [旧 DS_ChatVC <--> 新 DSDelegateController] 局部变量: item -> visibleItem
+文件: [旧 DS_ChatVC <--> 新 DSDelegateController] 局部变量: deleteAction -> comment
+文件: [旧 DS_ChatVC <--> 新 DSDelegateController] 局部变量: item -> visibleItem
+文件: [旧 DS_ChatVC <--> 新 DSDelegateController] 局部变量: configuration -> secondary
+
+
+开始自动生成垃圾代码文件。。。。。。。
+100%👌
+
+
+开始自动融合生成的垃圾代码文件。。。。。。
+100%👌
+
+
+开始自动加密混淆字符串。。。。。。。
+"https://docs.google.com/document/d/1CfH_t1e-yrRad7vHeT3GX5wyD2psZ04ZGjH9wYpwznM/edit?usp=sharing"
+"https://docs.google.com/document/d/1neC1k56HvPxOwyn0CgFWK02q1llrAo5bP_sUeduiCFU/edit?usp=sharing"
+"https://test.fiveukmedia.xyz/le/afd/"
+
+
+开始融合并调用生成的垃圾代码文件函数或者类。。。。。。。
+100%👌
+
+开始扰乱改变函数里面执行顺序。。。。。。。
+100%👌
+
+
+开始生成新混淆源文件。。。。。。。
+100%👌
+
+
+开始自动更新项目配置。。。。。。。
+100%👌
