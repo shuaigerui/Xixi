@@ -14,6 +14,7 @@ class DSNetworkExtensionController: DSSecondaryLiveController {
 
     private var clipItems: [DSTabbarManagerItem] = []
     private var videoPosts: [DSWelcomeCurrent] = []
+    private var teamRooms: [DSHome] = []
 
     private let headerView = DSNewsCoordinatorView()
 
@@ -189,8 +190,18 @@ class DSNetworkExtensionController: DSSecondaryLiveController {
       visibility0.append("\(visibility0.count | visibility0.count)")
    }
 
-        let time_c1 = UserData.allLiveRooms().map { room in
+        var teamRoomList = UserData.allLiveRooms()
+        if let user = DSSecondaryNews.shared.user {
+            let existingIds = Set(teamRoomList.map(\.roomId))
+            let created = user.createdLiveRooms.filter { !existingIds.contains($0.roomId) }
+            teamRoomList.append(contentsOf: created)
+        }
+        teamRoomList = teamRoomList.filter { !DSSecondaryNews.shared.isLiveRoomHidden(roomId: $0.roomId) }
+        teamRooms = teamRoomList
+
+        let time_c1 = teamRoomList.map { room in
             DSVideoNetworkItem(
+                roomId: room.roomId,
                 hostUserId: room.hostUserId,
                 coverImageName: room.coverUrl,
                 avatarImageName: room.hostAvatarUrl,
@@ -198,9 +209,12 @@ class DSNetworkExtensionController: DSSecondaryLiveController {
             )
         }
 
-        videoPosts = UserData.allPosts().filter(\.isVideo)
+        videoPosts = UserData.allPosts()
+            .filter(\.isVideo)
+            .sorted { $0.postId < $1.postId }
         clipItems = videoPosts.map { post in
             DSTabbarManagerItem(
+                postId: post.postId,
                 userId: post.userId,
                 videoPath: post.mediaUrl,
                 videoCoverPath: UserData.resolvedVideoCoverPath(for: post),
@@ -408,6 +422,15 @@ class DSNetworkExtensionController: DSSecondaryLiveController {
         headerView.onTeamItemTapped = { [weak self] item in
             self?.openPersonProfile(for: item)
         }
+
+        headerView.onTeamMoreTapped = { [weak self] item in
+            guard let self,
+                  let roomId = item.roomId,
+                  let room = self.teamRooms.first(where: { $0.roomId == roomId }) else { return }
+            self.handleLiveRoomMoreTapped(room: room) { [weak self] in
+                self?.loadData()
+            }
+        }
     }
 
     private func itemSize(for collectionView: UICollectionView) -> CGSize {
@@ -599,6 +622,13 @@ extension DSNetworkExtensionController: UICollectionViewDataSource, UICollection
         cell.onAvatarTapped = { [weak self] in
             guard let self, let userId = visibleItem.userId else { return }
             self.openPersonProfile(userId: userId)
+        }
+        cell.onMoreTapped = { [weak self] in
+            guard let self, indexPath.item < self.videoPosts.count else { return }
+            let post = self.videoPosts[indexPath.item]
+            self.handlePostMoreTapped(post: post) { [weak self] in
+                self?.loadData()
+            }
         }
         return cell
     }

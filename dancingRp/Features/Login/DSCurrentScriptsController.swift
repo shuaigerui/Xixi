@@ -37,6 +37,19 @@ class DSCurrentScriptsController: DSSecondaryLiveController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    private lazy var scrollView: UIScrollView = {
+        let v = UIScrollView()
+        v.showsVerticalScrollIndicator = false
+        v.alwaysBounceVertical = true
+        v.contentInsetAdjustmentBehavior = .never
+        return v
+    }()
+    private lazy var contentView: UIView = {
+        let v = UIView()
+        v.backgroundColor = .clear
+        return v
+    }()
+    
     private let topImageView: UIImageView = {
        var default_e4W: Float = 2.0
     _ = default_e4W
@@ -576,9 +589,11 @@ class DSCurrentScriptsController: DSSecondaryLiveController {
 
         view.backgroundColor = .black
 
-        view.addSubview(topImageView)
-        view.addSubview(formContainerView)
-        view.addSubview(backButton)
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        contentView.addSubview(topImageView)
+        contentView.addSubview(formContainerView)
+        contentView.addSubview(backButton)
 
         [
             titleLabel,
@@ -593,14 +608,23 @@ class DSCurrentScriptsController: DSSecondaryLiveController {
         avatarContainerView.addSubview(avatarImageView)
         avatarContainerView.addSubview(avatarEditButton)
 
+        scrollView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        contentView.snp.makeConstraints { make in
+            make.top.leading.trailing.equalToSuperview()
+            make.width.equalTo(scrollView.snp.width)
+            make.bottom.equalTo(formContainerView.snp.bottom)
+        }
+        
         topImageView.snp.makeConstraints { make in
             make.top.leading.trailing.equalToSuperview()
-            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.top).offset(230)
+            make.height.equalTo(230)
         }
 
         formContainerView.snp.makeConstraints { make in
             make.top.equalTo(topImageView.snp.bottom)
-            make.leading.trailing.bottom.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
         }
 
         backButton.snp.makeConstraints { make in
@@ -608,6 +632,8 @@ class DSCurrentScriptsController: DSSecondaryLiveController {
             make.top.equalTo(view.safeAreaLayoutGuide).inset(4)
             make.width.height.equalTo(44)
         }
+        
+        contentView.bringSubviewToFront(backButton)
 
         titleLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(20)
@@ -654,7 +680,8 @@ class DSCurrentScriptsController: DSSecondaryLiveController {
 
         createAccountButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(24)
+            make.top.equalTo(signInButton.snp.bottom).offset(20)
+            make.bottom.equalToSuperview().offset(-24)
             make.height.equalTo(64)
             make.width.equalTo(267)
         }

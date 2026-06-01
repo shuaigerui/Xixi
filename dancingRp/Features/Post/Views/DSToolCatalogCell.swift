@@ -7,6 +7,8 @@ final class DSToolCatalogCell: UITableViewCell {
 
     static let reuseIdentifier = "DSToolCatalogCell"
 
+    var onMoreTapped: (() -> Void)?
+
     private enum Layout {
         static let horizontalInset: CGFloat = 16
         static let avatarSize: CGFloat = 36
@@ -62,7 +64,7 @@ final class DSToolCatalogCell: UITableViewCell {
 
         let button = UIButton(type: .custom)
         button.setImage(UIImage(named: "post_more"), for: .normal)
-        button.isUserInteractionEnabled = false
+        button.addTarget(self, action: #selector(didTapMore), for: .touchUpInside)
         return button
     }()
 
@@ -85,6 +87,11 @@ final class DSToolCatalogCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupUI()
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        onMoreTapped = nil
     }
 
     @available(*, unavailable)
@@ -139,5 +146,9 @@ final class DSToolCatalogCell: UITableViewCell {
             make.top.equalTo(avatarImageView.snp.bottom).offset(8)
             make.bottom.equalToSuperview().inset(10)
         }
+    }
+
+    @objc private func didTapMore() {
+        onMoreTapped?()
     }
 }

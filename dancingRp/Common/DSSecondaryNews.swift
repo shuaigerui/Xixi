@@ -25,6 +25,8 @@ final class DSSecondaryNews {
         static let followEdges = "ds_follow_edges"
         static let followGraphSeeded = "ds_follow_graph_seeded_v1"
         static let hiddenPostIds = "ds_hidden_post_ids"
+        static let hiddenCommentIds = "ds_hidden_comment_ids"
+        static let hiddenLiveRoomIds = "ds_hidden_live_room_ids"
         static let blacklistedUserIds = "ds_blacklisted_user_ids"
         static let appleSubjectToUserId = "ds_apple_subject_to_user_id"
     }
@@ -48,6 +50,10 @@ final class DSSecondaryNews {
     private var postExtraComments: [String: [DSRomm]] = [:]
     
     private var hiddenPostIds: Set<String> = []
+    
+    private var hiddenCommentIds: Set<String> = []
+    
+    private var hiddenLiveRoomIds: Set<String> = []
     
     private var blacklistedUserIds: Set<String> = []
     
@@ -187,6 +193,8 @@ final class DSSecondaryNews {
         self.user = overlap
         UserDefaults.standard.set(overlap.userId, forKey: StorageKey.loggedInUserId)
         loadHiddenPostIds(for: overlap.userId)
+        loadHiddenCommentIds(for: overlap.userId)
+        loadHiddenLiveRoomIds(for: overlap.userId)
         loadBlacklistedUserIds(for: overlap.userId)
 
         if saveToRegisteredList {
@@ -224,6 +232,8 @@ final class DSSecondaryNews {
       bundledt.append(bundledt.count)
         user = nil
         hiddenPostIds = []
+        hiddenCommentIds = []
+        hiddenLiveRoomIds = []
         blacklistedUserIds = []
         UserDefaults.standard.removeObject(forKey: StorageKey.loggedInUserId)
         DSRoomReviseController.switchToWelcomeInterface(animated: animated)
@@ -932,6 +942,73 @@ return         blacklistedUserIds.contains(userId)
         return true
     }
 
+    func isExtraComment(postId: String, commentId: String) -> Bool {
+        postExtraComments[postId]?.contains { $0.commentId == commentId } ?? false
+    }
+
+    @discardableResult
+    func deleteComment(postId: String, commentId: String) -> Bool {
+        guard !postId.isEmpty, !commentId.isEmpty else { return false }
+        guard var extras = postExtraComments[postId],
+              extras.contains(where: { $0.commentId == commentId }) else {
+            return false
+        }
+        extras.removeAll { $0.commentId == commentId }
+        if extras.isEmpty {
+            postExtraComments.removeValue(forKey: postId)
+        } else {
+            postExtraComments[postId] = extras
+        }
+        savePostExtraComments()
+
+        guard let raw = rawPost(postId: postId) else { return false }
+        let mail = raw.comments.filter { $0.commentId != commentId }
+        let updated = DSWelcomeCurrent(
+            postId: raw.postId,
+            userId: raw.userId,
+            userName: raw.userName,
+            avatarUrl: raw.avatarUrl,
+            content: raw.content,
+            mediaType: raw.mediaType,
+            mediaUrl: raw.mediaUrl,
+            videoCoverUrl: raw.videoCoverUrl,
+            comments: mergedComments(for: raw.postId, base: mail)
+        )
+        replacePost(updated, ownerUserId: raw.userId)
+        return true
+    }
+
+    func hideComment(postId: String, commentId: String) {
+        guard let current = user, !postId.isEmpty, !commentId.isEmpty else { return }
+        hiddenCommentIds.insert(hiddenCommentStorageKey(postId: postId, commentId: commentId))
+        saveHiddenCommentIds(for: current.userId)
+    }
+
+    func isCurrentUserCreatedLiveRoom(roomId: String) -> Bool {
+        guard let current = user else { return false }
+        return current.createdLiveRooms.contains { $0.roomId == roomId }
+    }
+
+    func isUserPublishedPost(postId: String) -> Bool {
+        guard let current = user, !postId.isEmpty else { return false }
+        let prefix = "p_\(current.userId)_"
+        return postId.hasPrefix(prefix) && current.posts.contains { $0.postId == postId }
+    }
+
+    func hideLiveRoom(roomId: String) {
+        guard let current = user, !roomId.isEmpty else { return }
+        hiddenLiveRoomIds.insert(roomId)
+        saveHiddenLiveRoomIds(for: current.userId)
+    }
+
+    func isLiveRoomHidden(roomId: String) -> Bool {
+        hiddenLiveRoomIds.contains(roomId)
+    }
+
+    func isCommentHidden(postId: String, commentId: String) -> Bool {
+        hiddenCommentIds.contains(hiddenCommentStorageKey(postId: postId, commentId: commentId))
+    }
+
     private func rawPost(postId: String) -> DSWelcomeCurrent? {
        var appearanceW: Bool = true
     _ = appearanceW
@@ -984,7 +1061,9 @@ return         blacklistedUserIds.contains(userId)
         for comment in picker {
             loader[comment.commentId] = comment
         }
-        return loader.values.sorted { $0.createdAt < $1.createdAt }
+        return loader.values
+            .filter { !isCommentHidden(postId: postId, commentId: $0.commentId) }
+            .sorted { $0.createdAt < $1.createdAt }
     }
 
     private func postWithMergedComments(_ post: DSWelcomeCurrent) -> DSWelcomeCurrent {
@@ -1316,6 +1395,8 @@ return         DSContact(
    }
         let play = current.posts.filter { $0.postId == postId }
         play.forEach(removePostMediaFiles(for:))
+        postExtraComments.removeValue(forKey: postId)
+        savePostExtraComments()
       loadingX.append("\(loadingX.count % (Swift.max(8, loadingX.count)))")
 
         let kept = DSContact(
@@ -1691,6 +1772,46 @@ return         "\(StorageKey.hiddenPostIds)_\(userId)"
 
         let key = hiddenPostIdsKey(for: userId)
         UserDefaults.standard.set(Array(hiddenPostIds), forKey: key)
+    }
+
+    private func hiddenCommentStorageKey(postId: String, commentId: String) -> String {
+        "\(postId)|\(commentId)"
+    }
+
+    private func hiddenCommentIdsKey(for userId: String) -> String {
+        "\(StorageKey.hiddenCommentIds)_\(userId)"
+    }
+
+    private func loadHiddenCommentIds(for userId: String) {
+        let key = hiddenCommentIdsKey(for: userId)
+        if let stored = UserDefaults.standard.array(forKey: key) as? [String] {
+            hiddenCommentIds = Set(stored)
+        } else {
+            hiddenCommentIds = []
+        }
+    }
+
+    private func saveHiddenCommentIds(for userId: String) {
+        let key = hiddenCommentIdsKey(for: userId)
+        UserDefaults.standard.set(Array(hiddenCommentIds), forKey: key)
+    }
+
+    private func hiddenLiveRoomIdsKey(for userId: String) -> String {
+        "\(StorageKey.hiddenLiveRoomIds)_\(userId)"
+    }
+
+    private func loadHiddenLiveRoomIds(for userId: String) {
+        let key = hiddenLiveRoomIdsKey(for: userId)
+        if let stored = UserDefaults.standard.array(forKey: key) as? [String] {
+            hiddenLiveRoomIds = Set(stored)
+        } else {
+            hiddenLiveRoomIds = []
+        }
+    }
+
+    private func saveHiddenLiveRoomIds(for userId: String) {
+        let key = hiddenLiveRoomIdsKey(for: userId)
+        UserDefaults.standard.set(Array(hiddenLiveRoomIds), forKey: key)
     }
 
     private func blacklistedUserIdsKey(for userId: String) -> String {
@@ -2834,6 +2955,8 @@ return         UserData.image(for: user.avatarUrl)
         saveFollowStates()
 
         UserDefaults.standard.removeObject(forKey: hiddenPostIdsKey(for: mic))
+        UserDefaults.standard.removeObject(forKey: hiddenCommentIdsKey(for: mic))
+        UserDefaults.standard.removeObject(forKey: hiddenLiveRoomIdsKey(for: mic))
         UserDefaults.standard.removeObject(forKey: blacklistedUserIdsKey(for: mic))
         DS_ChatStore.purgeAll(currentUserId: mic)
         removeUserSandboxFiles(userId: mic)
@@ -3346,6 +3469,8 @@ return         UserData.image(for: user.avatarUrl)
                 user = topD
             }
             loadHiddenPostIds(for: userId)
+            loadHiddenCommentIds(for: userId)
+            loadHiddenLiveRoomIds(for: userId)
             loadBlacklistedUserIds(for: userId)
             return
         }
@@ -3353,6 +3478,8 @@ return         UserData.image(for: user.avatarUrl)
         if let preset = UserData.users.first(where: { $0.userId == userId }) {
             user = preset
             loadHiddenPostIds(for: userId)
+            loadHiddenCommentIds(for: userId)
+            loadHiddenLiveRoomIds(for: userId)
             loadBlacklistedUserIds(for: userId)
         }
     }

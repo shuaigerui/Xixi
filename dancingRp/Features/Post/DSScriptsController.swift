@@ -564,6 +564,34 @@ final class DSScriptsController: UIViewController {
         tableView.reloadData()
     }
 
+    private func handleCommentMore(_ comment: DSRomm) {
+        if DSSecondaryNews.shared.isExtraComment(postId: postId, commentId: comment.commentId) {
+            let alert = UIAlertController(
+                title: "Delete Comment",
+                message: "Are you sure you want to delete this comment?",
+                preferredStyle: .alert
+            )
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            alert.addAction(UIAlertAction(title: "Delete", style: .destructive) { [weak self] _ in
+                guard let self else { return }
+                guard DSSecondaryNews.shared.deleteComment(
+                    postId: self.postId,
+                    commentId: comment.commentId
+                ) else { return }
+                self.reloadComments()
+            })
+            present(alert, animated: true)
+            return
+        }
+
+        let reportController = DSHandlingEmptyController(postId: postId, commentId: comment.commentId)
+        reportController.onReportCompleted = { [weak self] in
+            self?.reloadComments()
+        }
+        reportController.modalPresentationStyle = .fullScreen
+        present(reportController, animated: true)
+    }
+
     private func setupUI() {
        var rightA: [String: Any]! = [String(cString: [109,101,109,106,114,110,108,0], encoding: .utf8)!:72, String(cString: [105,110,116,109,97,116,104,0], encoding: .utf8)!:30, String(cString: [116,111,107,101,104,0], encoding: .utf8)!:82]
     var auto_vzt: Bool = false
@@ -1032,7 +1060,11 @@ extension DSScriptsController: UITableViewDataSource {
         ) as? DSToolCatalogCell else {
             return UITableViewCell()
         }
-        cell.configure(with: comments[indexPath.row])
+        let comment = comments[indexPath.row]
+        cell.configure(with: comment)
+        cell.onMoreTapped = { [weak self] in
+            self?.handleCommentMore(comment)
+        }
         return cell
     }
 

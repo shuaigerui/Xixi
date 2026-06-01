@@ -241,6 +241,7 @@ class DSLiveCatalogController: DSSecondaryLiveController {
             let picker = user.createdLiveRooms.filter { !own.contains($0.roomId) }
             hostb.append(contentsOf: picker)
         }
+        hostb = hostb.filter { !DSSecondaryNews.shared.isLiveRoomHidden(roomId: $0.roomId) }
         allRooms = hostb
         recommendItems = hostb.map { makeLiveRoomItem(from: $0) }
 

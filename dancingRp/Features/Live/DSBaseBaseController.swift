@@ -494,6 +494,7 @@ class DSBaseBaseController: DSEmptyController {
         applyRoomInfo()
         setupMessages()
         setupUI()
+        infoButton.isHidden = DSSecondaryNews.shared.isCurrentUserCreatedLiveRoom(roomId: room.roomId)
         updateTableHeaderLayout()
         
         DSGuide.shared.postDefaultRequest { result in
@@ -976,51 +977,16 @@ class DSBaseBaseController: DSEmptyController {
     }
 
     @objc private func didTapInfo() {
-       var sandboxr: String! = String(cString: [109,105,115,115,101,115,0], encoding: .utf8)!
-       var previousk: String! = String(cString: [105,110,116,101,114,97,99,116,105,111,110,0], encoding: .utf8)!
-      withUnsafeMutablePointer(to: &previousk) { pointer in
-             _ = pointer.pointee
-      }
-       var clipsi: String! = String(cString: [98,105,116,114,101,118,0], encoding: .utf8)!
-      withUnsafeMutablePointer(to: &clipsi) { pointer in
-             _ = pointer.pointee
-      }
-          var currentL: String! = String(cString: [104,101,118,99,100,101,99,0], encoding: .utf8)!
-          var tabbart: String! = String(cString: [117,110,102,111,114,109,97,116,116,101,100,0], encoding: .utf8)!
-          _ = tabbart
-          var comment3: Int = 1
-         clipsi = "\(comment3)"
-         currentL.append("\(tabbart.count)")
-         tabbart.append("\(previousk.count)")
-       var recommendE: String! = String(cString: [99,111,110,118,111,108,117,116,101,0], encoding: .utf8)!
-       var micU: String! = String(cString: [114,101,97,108,116,105,109,101,0], encoding: .utf8)!
-      if previousk != String(cString:[113,0], encoding: .utf8)! && recommendE == String(cString:[109,0], encoding: .utf8)! {
-         previousk = "\(recommendE.count * 1)"
-      }
-      for _ in 0 ..< 3 {
-         clipsi.append("\(recommendE.count)")
-      }
-          var networkC: String! = String(cString: [97,101,115,116,97,98,0], encoding: .utf8)!
-         withUnsafeMutablePointer(to: &networkC) { pointer in
-    
-         }
-          var sandboxR: String! = String(cString: [115,105,103,118,101,114,0], encoding: .utf8)!
-         micU.append("\(3)")
-         networkC.append("\(3)")
-         sandboxR = "\(micU.count)"
-      while (recommendE == clipsi) {
-         clipsi.append("\(micU.count)")
-         break
-      }
-      sandboxr = "\(previousk.count)"
-
-        let option = UIAlertController(
-            title: room.title,
-            message: "Hosted by \(room.hostUserName)",
-            preferredStyle: .alert
-        )
-        option.addAction(UIAlertAction(title: "OK", style: .default))
-        present(option, animated: true)
+        let reportController = DSHandlingEmptyController(liveRoom: room)
+        reportController.onReportCompleted = { [weak self] in
+            guard let nav = self?.navigationController else { return }
+            if let catalog = nav.viewControllers.first(where: { $0 is DSLiveCatalogController }) {
+                nav.popToViewController(catalog, animated: true)
+            } else {
+                nav.popViewController(animated: true)
+            }
+        }
+        navigationController?.pushViewController(reportController, animated: true)
     }
 
     @objc private func didTapSend() {

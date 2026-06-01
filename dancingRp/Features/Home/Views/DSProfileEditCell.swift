@@ -4,10 +4,9 @@ import Foundation
 import UIKit
 
 struct DSTabbarManagerItem {
+    let postId: String?
     let userId: String?
-    
     let videoPath: String?
-    
     let videoCoverPath: String?
     let avatarImageName: String?
     let title: String
@@ -18,11 +17,13 @@ final class DSProfileEditCell: UICollectionViewCell {
     static let reuseIdentifier = "DSProfileEditCell"
 
     var onAvatarTapped: (() -> Void)?
+    var onMoreTapped: (() -> Void)?
 
     private enum Layout {
         static let cornerRadius: CGFloat = 10
         static let avatarSize: CGFloat = 28
         static let playButtonSize = CGSize(width: 40, height: 40)
+        static let moreButtonSize = CGSize(width: 40, height: 40)
         static let bottomInset: CGFloat = 10
         static let horizontalInset: CGFloat = 10
     }
@@ -50,6 +51,13 @@ final class DSProfileEditCell: UICollectionViewCell {
         let imageView = UIImageView(image: UIImage(named: "home_play"))
         imageView.contentMode = .scaleAspectFill
         return imageView
+    }()
+
+    private lazy var moreButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(named: "post_more"), for: .normal)
+        button.addTarget(self, action: #selector(didTapMore), for: .touchUpInside)
+        return button
     }()
 
     private let avatarImageView: UIImageView = {
@@ -107,6 +115,7 @@ final class DSProfileEditCell: UICollectionViewCell {
         super.prepareForReuse()
         loadingVideoPath = nil
         coverImageView.image = nil
+        onMoreTapped = nil
     }
 
     override func layoutSubviews() {
@@ -160,6 +169,7 @@ final class DSProfileEditCell: UICollectionViewCell {
         avatarImageView.image = UserData.image(for: item.avatarImageName)
         titleLabel.text = item.title
         playImageView.isHidden = item.videoPath == nil
+        moreButton.isHidden = item.postId == nil
 
         if let coverPath = item.videoCoverPath,
            let trimmedImage = UserData.image(for: coverPath) {
@@ -193,6 +203,7 @@ final class DSProfileEditCell: UICollectionViewCell {
 
         contentView.addSubview(coverImageView)
         contentView.addSubview(playImageView)
+        contentView.addSubview(moreButton)
         contentView.addSubview(avatarImageView)
         contentView.addSubview(titleLabel)
 
@@ -203,6 +214,11 @@ final class DSProfileEditCell: UICollectionViewCell {
         playImageView.snp.makeConstraints { make in
             make.top.trailing.equalToSuperview().inset(Layout.horizontalInset)
             make.size.equalTo(Layout.playButtonSize)
+        }
+
+        moreButton.snp.makeConstraints { make in
+            make.top.leading.equalToSuperview().inset(Layout.horizontalInset)
+            make.size.equalTo(Layout.moreButtonSize)
         }
 
         avatarImageView.snp.makeConstraints { make in
@@ -247,5 +263,9 @@ final class DSProfileEditCell: UICollectionViewCell {
    }
 
         onAvatarTapped?()
+    }
+
+    @objc private func didTapMore() {
+        onMoreTapped?()
     }
 }

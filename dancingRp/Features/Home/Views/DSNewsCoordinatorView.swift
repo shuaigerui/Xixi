@@ -7,6 +7,7 @@ class DSNewsCoordinatorView: UIView {
 
     var onAIBannerTapped: (() -> Void)?
     var onTeamItemTapped: ((DSVideoNetworkItem) -> Void)?
+    var onTeamMoreTapped: ((DSVideoNetworkItem) -> Void)?
 
     private enum Layout {
         static let teamCollectionHeight: CGFloat = 168
@@ -214,6 +215,9 @@ return         teamItems.count
         cell.configure(with: visibleItem)
         cell.onAvatarTapped = { [weak self] in
             self?.onTeamItemTapped?(visibleItem)
+        }
+        cell.onMoreTapped = { [weak self] in
+            self?.onTeamMoreTapped?(visibleItem)
         }
         return cell
     }

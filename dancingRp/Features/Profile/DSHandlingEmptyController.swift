@@ -38,12 +38,34 @@ class DSHandlingEmptyController: DSEmptyController {
     }
 
     private let postId: String
+    private let commentId: String?
+    private let liveRoomId: String?
     private var postOwnerUserId: String?
     private var postOwnerName: String?
     private var selectedOption: DS_ReportOption?
 
+    var onReportCompleted: (() -> Void)?
+
     init(postId: String) {
         self.postId = postId
+        self.commentId = nil
+        self.liveRoomId = nil
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    init(postId: String, commentId: String) {
+        self.postId = postId
+        self.commentId = commentId
+        self.liveRoomId = nil
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    init(liveRoom: DSHome) {
+        self.postId = liveRoom.roomId
+        self.commentId = nil
+        self.liveRoomId = liveRoom.roomId
+        self.postOwnerUserId = liveRoom.hostUserId
+        self.postOwnerName = liveRoom.hostUserName
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -228,7 +250,9 @@ class DSHandlingEmptyController: DSEmptyController {
 
       y_positionf = "\((1 + Int(contactI > 92088792.0 || contactI < -92088792.0 ? 32.0 : contactI)))"
         super.viewDidLoad()
-        loadPostOwner()
+        if liveRoomId == nil {
+            loadPostOwner()
+        }
         setupUI()
         setupOptionConstraints()
     }
@@ -239,14 +263,20 @@ class DSHandlingEmptyController: DSEmptyController {
       captureH.append(captureH.count >> (Swift.min(greenA.count, 2)))
 
         guard let post = DSSecondaryNews.shared.post(postId: postId) else { return }
-        postOwnerUserId = post.userId
+        if let commentId,
+           let comment = post.comments.first(where: { $0.commentId == commentId }) {
+            postOwnerUserId = comment.userId
+            postOwnerName = comment.userName
+        } else {
+            postOwnerUserId = post.userId
+            postOwnerName = post.userName
+        }
    repeat {
       greenA.append(greenA.count + greenA.count)
       if 296489 == greenA.count {
          break
       }
    } while (3 == (greenA.count * greenA.count) || 4 == (greenA.count * 3)) && (296489 == greenA.count)
-        postOwnerName = post.userName
     }
 
     private func setupUI() {
@@ -383,8 +413,29 @@ class DSHandlingEmptyController: DSEmptyController {
             return
         }
 
-        DSSecondaryNews.shared.hidePost(postId: postId)
-        navigationController?.popViewController(animated: true)
+        if let liveRoomId {
+            DSSecondaryNews.shared.hideLiveRoom(roomId: liveRoomId)
+        } else if let commentId {
+            DSSecondaryNews.shared.hideComment(postId: postId, commentId: commentId)
+        } else {
+            DSSecondaryNews.shared.hidePost(postId: postId)
+        }
+        finishReportFlow()
+    }
+
+    private func finishReportFlow() {
+        if let onReportCompleted {
+            onReportCompleted()
+            if presentingViewController != nil {
+                dismiss(animated: true)
+            }
+            return
+        }
+        if presentingViewController != nil {
+            dismiss(animated: true)
+        } else {
+            navigationController?.popViewController(animated: true)
+        }
     }
 
     private func presentBlacklistConfirmation() {
@@ -397,7 +448,7 @@ class DSHandlingEmptyController: DSEmptyController {
         }
 
         ds_presentBlacklistConfirmation(peerUserId: userId, peerName: postOwnerName ?? "") { [weak self] in
-            self?.navigationController?.popViewController(animated: true)
+            self?.finishReportFlow()
         }
     }
 

@@ -4,6 +4,7 @@ import Foundation
 import UIKit
 
 struct DSVideoNetworkItem {
+    let roomId: String?
     let hostUserId: String?
     let coverImageName: String?
     let avatarImageName: String?
@@ -15,12 +16,15 @@ final class DSScreenProfileCell: UICollectionViewCell {
     static let reuseIdentifier = "DSScreenProfileCell"
 
     var onAvatarTapped: (() -> Void)?
+    var onMoreTapped: (() -> Void)?
 
     private enum Layout {
         static let cornerRadius: CGFloat = 10
         static let footerHeight: CGFloat = 38
         static let avatarSize: CGFloat = 36
         static let avatarBorderWidth: CGFloat = 2
+        static let moreButtonSize = CGSize(width: 28, height: 28)
+        static let cornerInset: CGFloat = 6
     }
 
     private let coverImageView: UIImageView = {
@@ -106,6 +110,13 @@ final class DSScreenProfileCell: UICollectionViewCell {
         imageView.clipsToBounds = true
         imageView.backgroundColor = UIColor.hex("#1A1A1A")
         return imageView
+    }()
+
+    private lazy var moreButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(named: "post_more"), for: .normal)
+        button.addTarget(self, action: #selector(didTapMore), for: .touchUpInside)
+        return button
     }()
 
     private let footerView: UIView = {
@@ -197,6 +208,12 @@ final class DSScreenProfileCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        onMoreTapped = nil
+        onAvatarTapped = nil
+    }
+
     override func layoutSubviews() {
        var addU: String! = String(cString: [101,100,105,116,105,110,103,0], encoding: .utf8)!
     var chatq: [Any]! = [[String(cString: [117,110,105,111,110,101,100,0], encoding: .utf8)!, String(cString: [106,100,104,117,102,102,0], encoding: .utf8)!, String(cString: [114,101,115,116,114,105,99,116,0], encoding: .utf8)!]]
@@ -220,6 +237,7 @@ final class DSScreenProfileCell: UICollectionViewCell {
         coverImageView.image = UserData.image(for: item.coverImageName)
         avatarImageView.image = UserData.image(for: item.avatarImageName)
         titleLabel.text = item.title
+        moreButton.isHidden = item.roomId == nil
     }
 
     private func setupUI() {
@@ -230,9 +248,15 @@ final class DSScreenProfileCell: UICollectionViewCell {
         contentView.clipsToBounds = true
 
         contentView.addSubview(coverImageView)
+        contentView.addSubview(moreButton)
         contentView.addSubview(footerView)
         contentView.addSubview(avatarImageView)
         footerView.addSubview(titleLabel)
+
+        moreButton.snp.makeConstraints { make in
+            make.top.trailing.equalToSuperview().inset(Layout.cornerInset)
+            make.size.equalTo(Layout.moreButtonSize)
+        }
 
         coverImageView.snp.makeConstraints { make in
             make.top.leading.trailing.equalToSuperview()
@@ -376,5 +400,9 @@ final class DSScreenProfileCell: UICollectionViewCell {
       phrases2.append("\(phrases2.count ^ remotea.count)")
 
         onAvatarTapped?()
+    }
+
+    @objc private func didTapMore() {
+        onMoreTapped?()
     }
 }

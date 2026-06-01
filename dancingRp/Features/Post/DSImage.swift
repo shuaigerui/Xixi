@@ -16,10 +16,15 @@ extension UIViewController {
          permissionsq /= Swift.max(Double(sendere.count), 2)
       report8 = ["\(report8.count)": report8.values.count + sendere.count]
 
-        if post.userId == DSSecondaryNews.shared.user?.userId {
+        if DSSecondaryNews.shared.isUserPublishedPost(postId: post.postId) {
             presentDeletePostConfirmation(postId: post.postId, onDeleted: onDeleted)
         } else {
-            navigationController?.pushViewController(DSHandlingEmptyController(postId: post.postId), animated: true)
+            let reportController = DSHandlingEmptyController(postId: post.postId)
+            reportController.onReportCompleted = { [weak self] in
+                self?.navigationController?.popViewController(animated: true)
+                onDeleted()
+            }
+            navigationController?.pushViewController(reportController, animated: true)
         }
     }
 
@@ -65,5 +70,28 @@ extension UIViewController {
             onDeleted()
         })
         present(option, animated: true)
+    }
+
+    func handleLiveRoomMoreTapped(room: DSHome, onCompleted: @escaping () -> Void) {
+        if DSSecondaryNews.shared.isCurrentUserCreatedLiveRoom(roomId: room.roomId) {
+            let option = UIAlertController(
+                title: "Delete Chat Room?",
+                message: "\"\(room.title)\" will be permanently removed from this device.",
+                preferredStyle: .alert
+            )
+            option.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            option.addAction(UIAlertAction(title: "Delete", style: .destructive) { _ in
+                guard DSSecondaryNews.shared.deleteCreatedLiveRoom(roomId: room.roomId) else { return }
+                onCompleted()
+            })
+            present(option, animated: true)
+        } else {
+            let reportController = DSHandlingEmptyController(liveRoom: room)
+            reportController.onReportCompleted = { [weak self] in
+                self?.navigationController?.popViewController(animated: true)
+                onCompleted()
+            }
+            navigationController?.pushViewController(reportController, animated: true)
+        }
     }
 }
