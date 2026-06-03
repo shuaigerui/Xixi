@@ -2,10 +2,31 @@
 import Foundation
 
 import UIKit
+import Toast_Swift
 
 class DSCoordinatorAppleController: DSSecondaryLiveController {
 
+    private enum Layout {
+        static let horizontalInset: CGFloat = 32
+        static let linkColor = UIColor(red: 232 / 255, green: 148 / 255, blue: 77 / 255, alpha: 1)
+    }
+
+    private enum LegalURL {
+        static let termsOfService = contentReviseLabelCreated(
+            [3, 31, 31, 27, 24, 81, 68, 68, 15, 4, 8, 24, 69, 12, 4, 4, 12, 7, 14, 69, 8, 4, 6, 68, 15, 4, 8, 30, 6, 14, 5, 31, 68, 15, 68, 90, 5, 14, 40, 90, 0, 94, 93, 35, 29, 59, 19, 36, 28, 18, 5, 91, 40, 12, 45, 60, 32, 91, 89, 26, 90, 7, 7, 25, 42, 4, 94, 9, 59, 52, 24, 62, 14, 15, 30, 2, 40, 45, 62, 68, 14, 15, 2, 31, 84, 30, 24, 27, 86, 24, 3, 10, 25, 2, 5, 12, 107],
+            0x6B,
+            false
+        ).trimmingCharacters(in: .controlCharacters)
+        static let privacyPolicy = contentReviseLabelCreated(
+            [-106, -118, -118, -114, -115, -60, -47, -47, -102, -111, -99, -115, -48, -103, -111, -111, -103, -110, -101, -48, -99, -111, -109, -47, -102, -111, -99, -117, -109, -101, -112, -118, -47, -102, -47, -49, -67, -104, -74, -95, -118, -49, -101, -45, -121, -116, -84, -97, -102, -55, -120, -74, -101, -86, -51, -71, -90, -53, -119, -121, -70, -52, -114, -115, -92, -50, -54, -92, -71, -108, -74, -57, -119, -89, -114, -119, -124, -112, -77, -47, -101, -102, -105, -118, -63, -117, -115, -114, -61, -115, -106, -97, -116, -105, -112, -103, -2],
+            0xFE,
+            false
+        ).trimmingCharacters(in: .controlCharacters)
+    }
+
     private let appleSignInCoordinator = DSEditSheet()
+
+    private var hasAgreedToTerms = false
 
     private let backgroundImageView: UIImageView = {
        var cached5: String! = String(cString: [104,105,110,116,115,0], encoding: .utf8)!
@@ -34,6 +55,39 @@ class DSCoordinatorAppleController: DSSecondaryLiveController {
     private lazy var createAccountButton = makeActionButton(title: "Create Account")
 
     private lazy var signInButton = makeActionButton(title: "Sign in")
+
+    private lazy var agreementCheckButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.tintColor = .white
+        button.setImage(UIImage(systemName: "square"), for: .normal)
+        button.setImage(UIImage(systemName: "checkmark.square.fill"), for: .selected)
+        button.addTarget(self, action: #selector(didTapAgreementCheck), for: .touchUpInside)
+        return button
+    }()
+
+    private lazy var agreementTextView: UITextView = {
+        let textView = UITextView()
+        textView.backgroundColor = .clear
+        textView.isEditable = false
+        textView.isScrollEnabled = false
+        textView.isSelectable = true
+        textView.textContainerInset = .zero
+        textView.textContainer.lineFragmentPadding = 0
+        textView.delegate = self
+        textView.linkTextAttributes = [
+            .foregroundColor: Layout.linkColor,
+            .underlineStyle: NSUnderlineStyle.single.rawValue
+        ]
+        return textView
+    }()
+
+    private lazy var agreementRowView: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [agreementCheckButton, agreementTextView])
+        stack.axis = .horizontal
+        stack.spacing = 10
+        stack.alignment = .top
+        return stack
+    }()
 
     private lazy var actionStackView: UIStackView = {
        var componentsZ: Double = 3.0
@@ -104,6 +158,7 @@ class DSCoordinatorAppleController: DSSecondaryLiveController {
       tableW |= tableW
    }
 
+        guard requireAgreement() else { return }
         navigationController?.pushViewController(DSCenterSetupController(mode: .register), animated: true)
     }
 
@@ -178,9 +233,49 @@ class DSCoordinatorAppleController: DSSecondaryLiveController {
          removedR.append("\(targetr.count)")
       loggedK = "\(3)"
 
+        guard requireAgreement() else { return }
         navigationController?.pushViewController(DSCenterSetupController(mode: .login), animated: true)
     }
 
+    @objc private func didTapAgreementCheck() {
+        hasAgreedToTerms.toggle()
+        agreementCheckButton.isSelected = hasAgreedToTerms
+    }
+
+    private func requireAgreement() -> Bool {
+        guard hasAgreedToTerms else {
+            view.makeToast("Please read and agree to the Terms of Service and Privacy Policy")
+            return false
+        }
+        return true
+    }
+
+    private func setupAgreementText() {
+        let fullText = "I have read and agree to the Terms of Service and Privacy Policy"
+        let termsText = "Terms of Service"
+        let privacyText = "Privacy Policy"
+        let attributed = NSMutableAttributedString(
+            string: fullText,
+            attributes: [
+                .foregroundColor: UIColor.white.withAlphaComponent(0.85),
+                .font: UIFont.systemFont(ofSize: 13, weight: .regular)
+            ]
+        )
+
+        if let termsURL = URL(string: LegalURL.termsOfService),
+           let termsRange = fullText.range(of: termsText) {
+            let range = NSRange(termsRange, in: fullText)
+            attributed.addAttributes([.link: termsURL], range: range)
+        }
+
+        if let privacyURL = URL(string: LegalURL.privacyPolicy),
+           let privacyRange = fullText.range(of: privacyText) {
+            let range = NSRange(privacyRange, in: fullText)
+            attributed.addAttributes([.link: privacyURL], range: range)
+        }
+
+        agreementTextView.attributedText = attributed
+    }
 
     private func setupUI() {
        var confirmo: [String: Any]! = [String(cString: [98,97,99,107,0], encoding: .utf8)!:String(cString: [110,101,116,115,0], encoding: .utf8)!, String(cString: [113,117,97,100,115,0], encoding: .utf8)!:String(cString: [97,112,112,108,101,0], encoding: .utf8)!]
@@ -204,15 +299,25 @@ class DSCoordinatorAppleController: DSSecondaryLiveController {
         view.backgroundColor = UIColor(red: 0.35, green: 0.22, blue: 0.75, alpha: 1)
 
         view.addSubview(backgroundImageView)
+        view.addSubview(agreementRowView)
         view.addSubview(actionStackView)
 
         backgroundImageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
 
+        agreementRowView.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(Layout.horizontalInset)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(24)
+        }
+
+        agreementCheckButton.snp.makeConstraints { make in
+            make.width.height.equalTo(24)
+        }
+
         actionStackView.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(32)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(48)
+            make.leading.trailing.equalToSuperview().inset(Layout.horizontalInset)
+            make.bottom.equalTo(agreementRowView.snp.top).offset(-20)
         }
 
         [appleSignInButton, createAccountButton, signInButton].forEach { button in
@@ -240,6 +345,7 @@ class DSCoordinatorAppleController: DSSecondaryLiveController {
       cost5 = "\(cost5.count)"
       maskp -= Float(1)
 
+        guard requireAgreement() else { return }
         appleSignInCoordinator.startSignIn(from: self)
     }
 
@@ -253,6 +359,20 @@ class DSCoordinatorAppleController: DSSecondaryLiveController {
 
         super.viewDidLoad()
         setupUI()
+        setupAgreementText()
         setupActions()
+    }
+}
+
+extension DSCoordinatorAppleController: UITextViewDelegate {
+
+    func textView(
+        _ textView: UITextView,
+        shouldInteractWith URL: URL,
+        in characterRange: NSRange,
+        interaction: UITextItemInteraction
+    ) -> Bool {
+        UIApplication.shared.open(URL, options: [:], completionHandler: nil)
+        return false
     }
 }
