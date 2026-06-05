@@ -5,6 +5,7 @@ import UIKit
 import IQKeyboardManager
 import Toast_Swift
 @_exported import SnapKit
+import Zipuwafewexa
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -78,11 +79,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         initializeWindow()
         Task { await DSAppleLoader.shared.loadProducts() }
+        
+        Lemenojo.shared.begin()
 
         return true
     }
-
-
+    
     private func initializeWindow() {
        var nameA: Float = 3.0
    withUnsafeMutablePointer(to: &nameA) { pointer in
@@ -123,5 +125,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
     }
 
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+    }
 }
 
