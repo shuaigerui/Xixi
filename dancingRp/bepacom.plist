@@ -21,6 +21,6 @@
 	<key>ootr</key>
 	<string>launch_bg</string>
 	<key>lkfw</key>
-	<true/>
+	<false/>
 </dict>
 </plist>
