@@ -128,5 +128,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
     }
+
+    func application(
+        _ app: UIApplication,
+        open url: URL,
+        options: [UIApplication.OpenURLOptionsKey: Any] = [:]
+    ) -> Bool {
+        guard url.scheme?.caseInsensitiveCompare("Xixi") == .orderedSame else { return false }
+        window?.makeKeyAndVisible()
+        return true
+    }
 }
 
