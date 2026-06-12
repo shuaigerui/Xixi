@@ -9,7 +9,7 @@ class DSRegisterController: DSEmptyController {
     private enum Layout {
         static let horizontalInset: CGFloat = 24
         static let navBarHeight: CGFloat = 44
-        static let accentColor = UIColor(red: 232 / 255, green: 148 / 255, blue: 77 / 255, alpha: 1)
+        static let accentColor = UIColor(hex: "#7327C8")
     }
 
     static let supportEmail = "Xixifeadback@gmail.com"
